@@ -1,0 +1,148 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"86 C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+[v _main main `(v  1 e 1 0 ]
+"104
+[v _initPic initPic `(v  1 e 1 0 ]
+"120
+[v _ISR_Init ISR_Init `(v  1 e 1 0 ]
+"130
+[v _UART_Init UART_Init `(v  1 e 1 0 ]
+"154
+[v _LCD_Init LCD_Init `(v  1 e 1 0 ]
+"184
+[v _ISR ISR `II(v  1 e 1 0 ]
+"216
+[v _clearBuff clearBuff `(v  1 e 1 0 ]
+"224
+[v _decode decode `(v  1 e 1 0 ]
+"237
+[v _LCD_Send LCD_Send `(v  1 e 1 0 ]
+"59 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"216
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"340
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"402
+[v _PORTE PORTE `VEuc  1 e 1 @9 ]
+"454
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+"964
+[v _RCSTA RCSTA `VEuc  1 e 1 @24 ]
+"1066
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
+"1255
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"1325
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1375
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1437
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1499
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"1561
+[v _TRISE TRISE `VEuc  1 e 1 @137 ]
+"1618
+[v _PIE1 PIE1 `VEuc  1 e 1 @140 ]
+"1999
+[v _TXSTA TXSTA `VEuc  1 e 1 @152 ]
+"2080
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"2743
+[v _RCIF RCIF `VEb  1 e 0 @101 ]
+"2851
+[v _T0IF T0IF `VEb  1 e 0 @90 ]
+"81 C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+[v _timeCount timeCount `uc  1 e 1 0 ]
+"82
+[v _dataReceived dataReceived `[3]uc  1 e 3 0 ]
+"83
+[v _indexReceived indexReceived `uc  1 e 1 0 ]
+"84
+[v _isReceived isReceived `uc  1 e 1 0 ]
+"86
+[v _main main `(v  1 e 1 0 ]
+{
+"99
+} 0
+"104
+[v _initPic initPic `(v  1 e 1 0 ]
+{
+"117
+} 0
+"130
+[v _UART_Init UART_Init `(v  1 e 1 0 ]
+{
+[v UART_Init@baudRate baudRate `l  1 p 4 8 ]
+"151
+} 0
+"216
+[v _clearBuff clearBuff `(v  1 e 1 0 ]
+{
+[v clearBuff@buf buf `*.4uc  1 a 1 wreg ]
+"217
+[v clearBuff@i i `uc  1 a 1 8 ]
+"216
+[v clearBuff@buf buf `*.4uc  1 a 1 wreg ]
+[v clearBuff@dim dim `uc  1 p 1 4 ]
+[v clearBuff@index index `*.4uc  1 p 1 5 ]
+[v clearBuff@buf buf `*.4uc  1 a 1 7 ]
+"221
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"10
+[v ___lldiv@quotient quotient `ul  1 a 4 5 ]
+"11
+[v ___lldiv@counter counter `uc  1 a 1 9 ]
+"5
+[v ___lldiv@divisor divisor `ul  1 p 4 0 ]
+[v ___lldiv@dividend dividend `ul  1 p 4 4 ]
+"30
+} 0
+"154 C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+[v _LCD_Init LCD_Init `(v  1 e 1 0 ]
+{
+"175
+} 0
+"237
+[v _LCD_Send LCD_Send `(v  1 e 1 0 ]
+{
+[v LCD_Send@data data `uc  1 a 1 wreg ]
+[v LCD_Send@data data `uc  1 a 1 wreg ]
+[v LCD_Send@mode mode `uc  1 p 1 4 ]
+"241
+[v LCD_Send@data data `uc  1 a 1 7 ]
+"248
+} 0
+"120
+[v _ISR_Init ISR_Init `(v  1 e 1 0 ]
+{
+"127
+} 0
+"224
+[v _decode decode `(v  1 e 1 0 ]
+{
+"228
+} 0
+"184
+[v _ISR ISR `II(v  1 e 1 0 ]
+{
+"207
+} 0
