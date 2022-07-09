@@ -11,6 +11,6 @@ updates:
       interval: "weekly"
       
   - package-ecosystem: "nuget" # See documentation for possible values
-    directory: "/cloudProgram" # Location of package manifests
+    directory: "/cloudProgram/ITS.DIQU.ScapolanDavide.Esame.WebApp/ITS.DIQU.ScapolanDavide.Esame" # Location of package manifests
     schedule:
       interval: "weekly"
