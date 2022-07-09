@@ -1,0 +1,25 @@
+{
+  "name": "gatewayprogram",
+  "version": "1.0.0",
+  "description": "programma del gateway. Il suo compito è quello di fare da condensatore di messaggi per inviarli in cloud e di ricevere comandi dal cloud per reindirizzarlio al microcontrollore del caso",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidescapolan/ExamDIQU.git"
+  },
+  "author": "Davide Scapolan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidescapolan/ExamDIQU/issues"
+  },
+  "homepage": "https://github.com/davidescapolan/ExamDIQU#readme",
+  "dependencies": {
+    "azure-iot-device": "^1.18.0",
+    "azure-iot-device-mqtt": "^1.16.0",
+    "dotenv": "^16.0.1",
+    "serialport": "^9.2.8"
+  }
+}
