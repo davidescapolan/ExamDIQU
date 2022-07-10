@@ -15,6 +15,9 @@ const port = new SerialPort(serialPort, {
   baudRate: 115200
 });
 
+// create the IoTHub client
+var client = Client.fromConnectionString(deviceConnectionString, Protocol);
+
 port.open(function (err) {
     if (err) {
         return console.log('Error opening port: ', err.message);
@@ -26,10 +29,6 @@ port.open(function (err) {
 port.on('error', function(err) {
     console.log('Error: ', err.message);
 });
-
-// create the IoTHub client
-var client = Client.fromConnectionString(deviceConnectionString, Protocol);
-console.log('got client');
 
 // connect to the hub
 client.open(function(err) {
