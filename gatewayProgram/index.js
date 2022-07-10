@@ -5,24 +5,27 @@ var Client = require('azure-iot-device').Client;
 const dotenv = require('dotenv');
 //#endregion
 
-const port = new SerialPort('COM2', {
+//#region recupero variabili ambientali
+dotenv.config();
+var deviceConnectionString = process.env.IOTHUB_DEVICE_CONNECTION_STRING;
+var serialPort = process.env.SERIAL_PORT;
+//#endregion
+
+const port = new SerialPort(serialPort, {
   baudRate: 115200
-})
+});
 
 port.open(function (err) {
     if (err) {
         return console.log('Error opening port: ', err.message);
     }
     port.write('COM2 Open');
-})
+});
 
 // Open errors will be emitted as an error event
 port.on('error', function(err) {
     console.log('Error: ', err.message);
-})
-
-dotenv.config();
-var deviceConnectionString = process.env.IOTHUB_DEVICE_CONNECTION_STRING;
+});
 
 // create the IoTHub client
 var client = Client.fromConnectionString(deviceConnectionString, Protocol);
