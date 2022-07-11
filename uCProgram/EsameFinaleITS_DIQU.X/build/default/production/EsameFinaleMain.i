@@ -20,7 +20,7 @@
 #pragma config WRT = OFF
 
 #pragma config CP = OFF
-# 70 "EsameFinaleMain.c"
+# 85 "EsameFinaleMain.c"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -1730,34 +1730,48 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 70 "EsameFinaleMain.c" 2
+# 85 "EsameFinaleMain.c" 2
 
 
 void initPic(void);
 void ISR_Init(void);
 void UART_Init(long int);
-void clearBuff(char *, unsigned char, unsigned char *);
+void clearBuff(unsigned char *, unsigned char, unsigned char *);
 void decode(void);
 void LCD_Init(void);
 void LCD_Send(char, char);
 void LCD_Write(char[]);
+void LCD_Start(void);
+void LCD_Value(void);
 
 unsigned char timeCount;
 unsigned char dataReceived[3];
 unsigned char indexReceived;
-char isReceived;
+char flag;
+char decine;
+char unita;
+char oldDecine;
+char oldUnita;
 
 void main(void) {
     initPic();
+    LCD_Start();
     while(1){
-        if(isReceived){
+        if(flag && 0x01){
 
             decode();
 
             clearBuff(dataReceived, 3, &indexReceived);
-            isReceived= 0;
+            flag &= ~0x01;
         }
 
+        if(flag && 0x02){
+            if(oldDecine!=decine || oldUnita!=unita)
+            {
+                LCD_Value();
+            }
+            flag &= ~0x02;
+        }
     }
     return;
 }
@@ -1774,6 +1788,10 @@ void initPic(){
     TRISE= 0x00;
 
     timeCount= 0;
+    decine= 0x30;
+    unita= 0x30;
+    oldDecine= 0x39;
+    oldUnita= 0x39;
 
     ISR_Init();
     UART_Init(9600);
@@ -1811,7 +1829,7 @@ void UART_Init(long int baudRate){
     PIE1|= 0x20;
 
     clearBuff(dataReceived, 3, &indexReceived);
-    isReceived= 0;
+    flag= 0;
 }
 
 
@@ -1837,7 +1855,7 @@ void LCD_Init()
     LCD_Send(0X0E, 1);
     LCD_Send(0X80, 1);
 }
-# 184 "EsameFinaleMain.c"
+# 217 "EsameFinaleMain.c"
 void __attribute__((picinterrupt(("")))) ISR(){
     if(T0IF){
 
@@ -1848,6 +1866,7 @@ void __attribute__((picinterrupt(("")))) ISR(){
         if(timeCount > 30){
             timeCount= 0;
             PORTB^= 0x80;
+            flag|= 0x02;
         }
 
         T0IF=0;
@@ -1857,13 +1876,13 @@ void __attribute__((picinterrupt(("")))) ISR(){
         dataReceived[indexReceived++]= RCREG;
         if(indexReceived == 3){
 
-            isReceived= 1;
+            flag|= 0x01;
         }
         RCIF= 0;
     }
 }
-# 216 "EsameFinaleMain.c"
-void clearBuff(char *buf, unsigned char dim, unsigned char *index){
+# 250 "EsameFinaleMain.c"
+void clearBuff(unsigned char *buf, unsigned char dim, unsigned char *index){
     for (unsigned char i= 0; i < dim; i++){
         buf[i]= 0;
     }
@@ -1873,10 +1892,11 @@ void clearBuff(char *buf, unsigned char dim, unsigned char *index){
 
 void decode(){
     if(dataReceived[0] == 0x01 || dataReceived[0] == 0xff){
-
+        decine=dataReceived[1];
+        unita=dataReceived[2];
     }
 }
-# 237 "EsameFinaleMain.c"
+# 272 "EsameFinaleMain.c"
 void LCD_Send(char data, char mode)
 {
 
@@ -1901,4 +1921,16 @@ void LCD_Write(char phrase[])
         if (j == 32){LCD_Send(0X80, 1);}
         LCD_Send(phrase[j], 0);
     }
+}
+
+
+void LCD_Start(void){
+    LCD_Write("Valore =");
+}
+
+
+void LCD_Value(void){
+    LCD_Send(0x89, 1);
+    LCD_Send(decine, 0);
+    LCD_Send(unita, 0);
 }

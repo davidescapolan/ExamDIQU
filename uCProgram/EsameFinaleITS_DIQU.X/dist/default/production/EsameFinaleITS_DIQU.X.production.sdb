@@ -13,24 +13,30 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"86 C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+"107 C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
 [v _main main `(v  1 e 1 0 ]
-"104
+"133
 [v _initPic initPic `(v  1 e 1 0 ]
-"120
+"153
 [v _ISR_Init ISR_Init `(v  1 e 1 0 ]
-"130
+"163
 [v _UART_Init UART_Init `(v  1 e 1 0 ]
-"154
+"187
 [v _LCD_Init LCD_Init `(v  1 e 1 0 ]
-"184
+"217
 [v _ISR ISR `II(v  1 e 1 0 ]
-"216
+"250
 [v _clearBuff clearBuff `(v  1 e 1 0 ]
-"224
+"258
 [v _decode decode `(v  1 e 1 0 ]
-"237
+"272
 [v _LCD_Send LCD_Send `(v  1 e 1 0 ]
+"286
+[v _LCD_Write LCD_Write `(v  1 e 1 0 ]
+"299
+[v _LCD_Start LCD_Start `(v  1 e 1 0 ]
+"304
+[v _LCD_Value LCD_Value `(v  1 e 1 0 ]
 "59 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
 "216
@@ -67,42 +73,50 @@
 [v _RCIF RCIF `VEb  1 e 0 @101 ]
 "2851
 [v _T0IF T0IF `VEb  1 e 0 @90 ]
-"81 C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+"98 C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
 [v _timeCount timeCount `uc  1 e 1 0 ]
-"82
+"99
 [v _dataReceived dataReceived `[3]uc  1 e 3 0 ]
-"83
+"100
 [v _indexReceived indexReceived `uc  1 e 1 0 ]
-"84
-[v _isReceived isReceived `uc  1 e 1 0 ]
-"86
+"101
+[v _flag flag `uc  1 e 1 0 ]
+"102
+[v _decine decine `uc  1 e 1 0 ]
+"103
+[v _unita unita `uc  1 e 1 0 ]
+"104
+[v _oldDecine oldDecine `uc  1 e 1 0 ]
+"105
+[v _oldUnita oldUnita `uc  1 e 1 0 ]
+"107
 [v _main main `(v  1 e 1 0 ]
 {
-"99
+"128
 } 0
-"104
+"133
 [v _initPic initPic `(v  1 e 1 0 ]
 {
-"117
+"150
 } 0
-"130
+"163
 [v _UART_Init UART_Init `(v  1 e 1 0 ]
 {
 [v UART_Init@baudRate baudRate `l  1 p 4 8 ]
-"151
+"184
 } 0
-"216
+"250
 [v _clearBuff clearBuff `(v  1 e 1 0 ]
 {
 [v clearBuff@buf buf `*.4uc  1 a 1 wreg ]
-"217
+"251
 [v clearBuff@i i `uc  1 a 1 8 ]
-"216
+"250
 [v clearBuff@buf buf `*.4uc  1 a 1 wreg ]
 [v clearBuff@dim dim `uc  1 p 1 4 ]
 [v clearBuff@index index `*.4uc  1 p 1 5 ]
 [v clearBuff@buf buf `*.4uc  1 a 1 7 ]
-"221
+"255
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
@@ -116,33 +130,55 @@
 [v ___lldiv@dividend dividend `ul  1 p 4 4 ]
 "30
 } 0
-"154 C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+"187 C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
 [v _LCD_Init LCD_Init `(v  1 e 1 0 ]
 {
-"175
+"208
 } 0
-"237
+"153
+[v _ISR_Init ISR_Init `(v  1 e 1 0 ]
+{
+"160
+} 0
+"258
+[v _decode decode `(v  1 e 1 0 ]
+{
+"263
+} 0
+"304
+[v _LCD_Value LCD_Value `(v  1 e 1 0 ]
+{
+"308
+} 0
+"299
+[v _LCD_Start LCD_Start `(v  1 e 1 0 ]
+{
+"301
+} 0
+"286
+[v _LCD_Write LCD_Write `(v  1 e 1 0 ]
+{
+[v LCD_Write@phrase phrase `*.24uc  1 a 1 wreg ]
+"289
+[v LCD_Write@j j `i  1 a 2 1 ]
+"286
+[v LCD_Write@phrase phrase `*.24uc  1 a 1 wreg ]
+"289
+[v LCD_Write@phrase phrase `*.24uc  1 a 1 0 ]
+"296
+} 0
+"272
 [v _LCD_Send LCD_Send `(v  1 e 1 0 ]
 {
 [v LCD_Send@data data `uc  1 a 1 wreg ]
 [v LCD_Send@data data `uc  1 a 1 wreg ]
 [v LCD_Send@mode mode `uc  1 p 1 4 ]
-"241
+"276
 [v LCD_Send@data data `uc  1 a 1 7 ]
-"248
+"283
 } 0
-"120
-[v _ISR_Init ISR_Init `(v  1 e 1 0 ]
-{
-"127
-} 0
-"224
-[v _decode decode `(v  1 e 1 0 ]
-{
-"228
-} 0
-"184
+"217
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"207
+"241
 } 0

@@ -27,6 +27,13 @@
 
 #define _XTAL_FREQ 8000000
 
+// <editor-fold defaultstate="collapsed" desc="FLAG">
+
+#define RXCOMPLETE 0x01 //bit del flag per avvenuta ricezione messaggio
+#define DISPPRINT 0x02 //bit del flag per scrittura su display
+
+// </editor-fold>
+
 // <editor-fold defaultstate="collapsed" desc="SPECIFICHE PROTOCOLLO SERIALE">
 
 #define BAUDRATE 9600
@@ -34,6 +41,8 @@
 #define RXADDRESS 0 //posizione dell'inidirizzo destinatario da specifiche
 #define MYADDRESS 0x01 //indirizzo scheda
 #define BROADCASTADDRESS 0xff //indirizzo broadcast
+#define DCADDRESS 1 //posizione delle decine del valore da specifiche
+#define UNADDRESS 2 //posizione delle unita del valore da specifiche
 
 // </editor-fold>
 
@@ -65,6 +74,12 @@
 #define L_RS 0X04 //LCD Register Selector (Command or Character)
 #define L_EN 0X02 //LCD Enable
 
+#define CMD 1
+#define DTA 0
+
+#define STRINGLCD "Valore ="
+#define LCDVALUEPOS 0x89
+
 // </editor-fold>
 
 #include <xc.h>
@@ -72,28 +87,42 @@
 void initPic(void);
 void ISR_Init(void);
 void UART_Init(long int);
-void clearBuff(char *, unsigned char, unsigned char *);
+void clearBuff(unsigned char *, unsigned char, unsigned char *);
 void decode(void);
 void LCD_Init(void);
 void LCD_Send(char, char);
 void LCD_Write(char[]);
+void LCD_Start(void);
+void LCD_Value(void);
 
 unsigned char timeCount; //contatore per interrupt
 unsigned char dataReceived[BUFMAX]; //array di lunghezza fissa da specifiche
 unsigned char indexReceived; //indice di inserimento del byte nel buffer
-char isReceived; //flag di ricezione completa
+char flag; //0 0 0 0 0 0 -scrittura su display- -flag di ricezione completa-
+char decine;
+char unita;
+char oldDecine;
+char oldUnita;
 
 void main(void) {
     initPic();
+    LCD_Start();
     while(1){
-        if(isReceived){
+        if(flag && RXCOMPLETE){
             //tratto il dato
             decode();
             //ripulisco il buffer
             clearBuff(dataReceived, BUFMAX, &indexReceived);
-            isReceived= 0;
+            flag &= ~RXCOMPLETE;
         }
         //stampo il dato/reagisco al comando
+        if(flag && DISPPRINT){
+            if(oldDecine!=decine || oldUnita!=unita)
+            {
+                LCD_Value();
+            }
+            flag &= ~DISPPRINT;
+        }
     }
     return;
 }
@@ -110,6 +139,10 @@ void initPic(){
     TRISE= 0x00;
     //inizializzo le variabili
     timeCount= 0;
+    decine= 0x30;
+    unita= 0x30;
+    oldDecine= 0x39;
+    oldUnita= 0x39;
     //inizializzo il timer
     ISR_Init();
     UART_Init(BAUDRATE);
@@ -147,7 +180,7 @@ void UART_Init(long int baudRate){
     PIE1|= 0x20;
     //pulisco buffer e azzero index
     clearBuff(dataReceived, BUFMAX, &indexReceived);
-    isReceived= 0;
+    flag= 0;
 }
 
 //INIT per LCD
@@ -191,6 +224,7 @@ void __interrupt() ISR(){
         if(timeCount > 30){
             timeCount= 0;
             PORTB^= 0x80;
+            flag|= DISPPRINT;
         }
         
         T0IF=0;
@@ -200,7 +234,7 @@ void __interrupt() ISR(){
         dataReceived[indexReceived++]= RCREG;
         if(indexReceived == BUFMAX){
             //se l'array è pieno alza il flag di ricezione 
-            isReceived= 1;
+            flag|= RXCOMPLETE;
         }
         RCIF= 0;
     }
@@ -213,7 +247,7 @@ void __interrupt() ISR(){
 // <editor-fold defaultstate="collapsed" desc="UART SECTION">
 
 //ripulisce il buffer del messaggio
-void clearBuff(char *buf, unsigned char dim, unsigned char *index){
+void clearBuff(unsigned char *buf, unsigned char dim, unsigned char *index){
     for (unsigned char i= 0; i < dim; i++){
         buf[i]= 0;
     }
@@ -223,7 +257,8 @@ void clearBuff(char *buf, unsigned char dim, unsigned char *index){
 //decodifica il messaggio
 void decode(){
     if(dataReceived[RXADDRESS] == MYADDRESS || dataReceived[RXADDRESS] == BROADCASTADDRESS){
-        
+        decine=dataReceived[DCADDRESS];
+        unita=dataReceived[UNADDRESS];
     }
 }
 
@@ -258,6 +293,18 @@ void LCD_Write(char phrase[])
         if (j == 32){LCD_Send(L_L1_C1, 1);}
         LCD_Send(phrase[j], 0);
     }
+}
+
+//scrittura iniziale del LCD
+void LCD_Start(void){
+    LCD_Write(STRINGLCD);
+}
+
+//scrittura valori su display
+void LCD_Value(void){
+    LCD_Send(LCDVALUEPOS, CMD);
+    LCD_Send(decine, DTA);
+    LCD_Send(unita, DTA);
 }
 
 // </editor-fold>
