@@ -46,14 +46,27 @@ client.open(function(err) {
   
 
                 twin.on('properties.desired', function(delta) {
-                    console.log('new desired properties received:');
+                    //console.log('new desired properties received:');
                     console.log(JSON.stringify(delta));
-                    port.write('main screen turn on', function(err) {
-                        if (err) {
-                            return console.log('Error on write: ', err.message);
+                    if(delta.hasOwnProperty('Value') && delta.hasOwnProperty('Micro'))
+                    {
+                        let micro = delta.Micro;
+                        let Value = delta.Value;
+
+                        var ByteArray = [micro];
+                        var buffer = new Buffer.from(Value, 'utf8');
+                        for (var i = 0; i < buffer.length; i++) {
+                            ByteArray.push(buffer[i]);
                         }
-                        console.log('message written');
-                    });
+                        //console.log(myBuffer);
+                        port.write(ByteArray, function(err) {
+                            if (err) {
+                                return console.log('Error on write: ', err.message);
+                            }
+                            console.log('message written');
+                        });
+                    }
+                    
                 });
             }
         });
