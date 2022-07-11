@@ -5,6 +5,35 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">TITLE EXAM</h1>
+    <form method="post">
+
+            <div class="mb-4">
+                <label class="d-block" asp-for="Input.IdDevice">Scegli il device</label>
+                <select asp-for="Input.IdDevice">
+                    <option selected value="device1">Device1</option>
+                    <option value="device2">Device2</option>
+                    <option value="device3">Device3</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label class="d-block" asp-for="Input.Micro">Scegli micro</label>
+                <select asp-for="Input.Micro">
+                    <option selected value=1>Micro1</option>
+                    <option value=2>Micro2</option>
+                    <option value=3>Micro3</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label class="d-block" asp-for="Input.Value">Scegli il valore da inviare</label>
+                <input asp-for="Input.Value" type="number" min=0 max=99>
+            </div>
+
+            <div class="mb-4">
+                <input type="submit" value="Submit"/>
+            </div>
+
+    </form>
 </div>

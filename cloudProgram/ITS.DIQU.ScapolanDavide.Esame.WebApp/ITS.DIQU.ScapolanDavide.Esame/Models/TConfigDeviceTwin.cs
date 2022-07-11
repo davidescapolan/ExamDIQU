@@ -2,6 +2,8 @@
 {
     public class TConfigDeviceTwin
     {
-        public int MyProperty { get; set; }
+        public string IdDevice { get; set; }
+        public int Micro { get; set; }
+        public int Value { get; set; }
     }
 }

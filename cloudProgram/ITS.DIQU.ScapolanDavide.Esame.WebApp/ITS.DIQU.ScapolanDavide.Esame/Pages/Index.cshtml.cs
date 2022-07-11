@@ -39,31 +39,38 @@ namespace ITS.DIQU.ScapolanDavide.Esame.Pages
 
             //Set the comunication with the device1
             var deviceTwin = await registry.GetTwinAsync(_targetDevice1);
-            /*
-            //check if the Reported parameters contains TimeBetween value
-            if (deviceTwin.Properties.Reported.Contains("TimeBetween"))
+            //check if the Reported parameters contains Micro value
+            if (deviceTwin.Properties.Reported.Contains("Micro"))
             {
                 //Insert the new old value in the input field
-                var reportedTimeBetween = deviceTwin.Properties.Reported["TimeBetween"];
-                Input.TimeBetween = reportedTimeBetween;
+                var reportedMicro = deviceTwin.Properties.Reported["Micro"];
+                Input.Micro = reportedMicro;
             }
-            */
+            //check if the Reported parameters contains Value value
+            if (deviceTwin.Properties.Reported.Contains("Value"))
+            {
+                //Insert the new old value in the input field
+                var reportedValue = deviceTwin.Properties.Reported["Value"];
+                Input.Value = reportedValue;
+            }
             return Page();
         }
 
         public async Task<IActionResult> OnPost()
         {
             //Get the value of the IdDevice field
-            string idDevice = ""/*Input.IdDevice*/;
+            string idDevice = Input.IdDevice;
 
             //Set the comunication with the Device
             var deviceTwin = await registry.GetTwinAsync(idDevice);
 
-            //Get the value of the TimeBetween field
-            int timeBetween = 0/*Input.TimeBetween*/;
+            //Get the value of the field
+            string val = Input.Value.ToString();
+            int micro = Input.Micro;
 
-            //Set the Desired properties TimeBetween
-            deviceTwin.Properties.Desired["TimeBetween"] = timeBetween;
+            //Set the Desired properties
+            deviceTwin.Properties.Desired["Value"] = val;
+            deviceTwin.Properties.Desired["Micro"] = micro;
 
             //Send to the Device the new configuration
             await registry.UpdateTwinAsync(idDevice, deviceTwin, deviceTwin.ETag);
