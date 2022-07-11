@@ -39,18 +39,11 @@ namespace ITS.DIQU.ScapolanDavide.Esame.Pages
 
             //Set the comunication with the device1
             var deviceTwin = await registry.GetTwinAsync(_targetDevice1);
-            //check if the Reported parameters contains Micro value
-            if (deviceTwin.Properties.Reported.Contains("Micro"))
-            {
-                //Insert the new old value in the input field
-                var reportedMicro = deviceTwin.Properties.Reported["Micro"];
-                Input.Micro = reportedMicro;
-            }
             //check if the Reported parameters contains Value value
-            if (deviceTwin.Properties.Reported.Contains("Value"))
+            if (deviceTwin.Properties.Reported.Contains("Micro1"))
             {
                 //Insert the new old value in the input field
-                var reportedValue = deviceTwin.Properties.Reported["Value"];
+                var reportedValue = deviceTwin.Properties.Reported["Micro1"];
                 Input.Value = reportedValue;
             }
             return Page();
@@ -60,17 +53,37 @@ namespace ITS.DIQU.ScapolanDavide.Esame.Pages
         {
             //Get the value of the IdDevice field
             string idDevice = Input.IdDevice;
+            Microsoft.Azure.Devices.Shared.Twin deviceTwin;
 
-            //Set the comunication with the Device
-            var deviceTwin = await registry.GetTwinAsync(idDevice);
+            switch (idDevice)
+            {
+                case "device2":
+                    //Set the comunication with the Device
+                    deviceTwin = await registry.GetTwinAsync(_targetDevice2);
+                    break;
+                case "device3":
+                    //Set the comunication with the Device
+                    deviceTwin = await registry.GetTwinAsync(_targetDevice3);
+                    break;
+                default:
+                    //Set the comunication with the Device
+                    deviceTwin = await registry.GetTwinAsync(_targetDevice1);
+                    break;
+            }
 
             //Get the value of the field
-            string val = Input.Value.ToString();
+            int val = Input.Value;
             int micro = Input.Micro;
-
-            //Set the Desired properties
-            deviceTwin.Properties.Desired["Value"] = val;
-            deviceTwin.Properties.Desired["Micro"] = micro;
+            if (val>9)
+            {
+                //Set the Desired properties
+                deviceTwin.Properties.Desired[$"Micro{micro}"] = val.ToString();
+            }
+            else
+            {
+                //Set the Desired properties
+                deviceTwin.Properties.Desired[$"Micro{micro}"] = '0' + val.ToString();
+            }
 
             //Send to the Device the new configuration
             await registry.UpdateTwinAsync(idDevice, deviceTwin, deviceTwin.ETag);
