@@ -16,6 +16,12 @@ namespace ITS.DIQU.ScapolanDavide.Esame.Pages
 
         private readonly RegistryManager registry;
 
+
+        [BindProperty]
+        public TConfigDeviceTwin Input { get; set; }
+        public TDevice DeviceObject { get; set; }
+
+
         public IndexModel(IConfiguration configuration, ILogger<IndexModel> logger)
         {
             _logger = logger;
@@ -26,16 +32,14 @@ namespace ITS.DIQU.ScapolanDavide.Esame.Pages
             _targetDevice3 = configuration.GetConnectionString("DeviceId3");
 
             registry = RegistryManager.CreateFromConnectionString(_connectionString);
-        }
 
-        [BindProperty]
-        public TConfigDeviceTwin Input { get; set; }
-        public TDevice DeviceObject { get; set; }
+
+            Input = new TConfigDeviceTwin();
+            DeviceObject = new TDevice();
+        }
 
         public async Task<IActionResult> OnGetAsync(string device = "device1")
         {
-            Input = new TConfigDeviceTwin();
-            DeviceObject = new TDevice();
 
             //Set the comunication with the device1
             var deviceTwin = await registry.GetTwinAsync(device);
