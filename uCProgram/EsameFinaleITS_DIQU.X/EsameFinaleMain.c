@@ -5,11 +5,8 @@
  * Created on 9 luglio 2022, 13.04
  */
 
-/*
-================================================================================
- CONFIG
-================================================================================ 
-*/
+// <editor-fold defaultstate="collapsed" desc="CONFIGURATION">
+
 #pragma config FOSC = HS // Oscillator Selection bits (HS oscillator)
 #pragma config WDTE = OFF // Watchdog Timer Enable bit (WDT disabled)
 #pragma config PWRTE = ON // Power-up Timer Enable bit (PWRT enabled)
@@ -24,7 +21,18 @@
 #pragma config CP = OFF // Flash Program Memory Code Protection bit (Code 
 //protection off)
 
+// </editor-fold>
+
 #define _XTAL_FREQ 8000000 //8 MHZ   8 000 KHz    8 000 000 Hz
+
+// <editor-fold defaultstate="collapsed" desc="DEFINE ISR">
+
+#define ROUNDCLOCK 31 //cicli di interrupt del timer 0 per avere circa 1 secondo
+#define PRELOADTMR0 6 //preload timer 0
+#define RB7PORTB 0x80 //flag valore da mettere in xor con portb per far
+//lampeggiare RB7
+
+// </editor-fold>
 
 // <editor-fold defaultstate="collapsed" desc="FLAG">
 
@@ -84,7 +92,7 @@
 #include <xc.h>
 
 void initPic(void);
-void ISR_Init(void);
+void TMR_Init(void);
 void UART_Init(long int);
 void clearBuff(unsigned char *, unsigned char, unsigned char *);
 void decode(void);
@@ -126,6 +134,8 @@ void main(void) {
     return;
 }
 
+//==============================================================================
+
 // <editor-fold defaultstate="collapsed" desc="INIT SECTION">
 
 //INIT Pic generico, richiama tutti gli altri init del caso
@@ -143,19 +153,19 @@ void initPic(){
     oldDecine= 0x39;
     oldUnita= 0x39;
     //inizializzo il timer
-    ISR_Init();
+    TMR_Init();
     UART_Init(BAUDRATE);
     LCD_Init();
 }
 
 //INIT per Interrupt TMR0
-void ISR_Init(void){
+void TMR_Init(void){
     //abilito GIE (0x80) e TMR0IE (0x20)
     INTCON= 0xA0;
     //carico il prescaler al massimo
     OPTION_REG= 0x07;
     //precarico il TMR0
-    TMR0= 6;
+    TMR0= PRELOADTMR0;
 }
 
 //INIT per UART e Interrupt UART
@@ -183,8 +193,7 @@ void UART_Init(long int baudRate){
 }
 
 //INIT per LCD
-void LCD_Init()
-{
+void LCD_Init(){
     //imposto come uscita RS (0X04) ed EN (0x02) del display 
     TRISE &= ~0x06;
     //imposto come uscita tutta portD
@@ -214,20 +223,22 @@ void LCD_Init()
 
 //interrupt ogni 32 ms
 void __interrupt() ISR(){
+    //TIMER
     if(T0IF){
         //ricarico il timer
-        TMR0= 6;
-        
+        TMR0= PRELOADTMR0;
+        //32 ms * 31 = 992 ms
         timeCount++;
         //ogni 1 s circa faccio lampeggiare RB7 come segnale di funzionamento
-        if(timeCount > 30){
+        if(timeCount > ROUNDCLOCK){
             timeCount= 0;
-            PORTB^= 0x80;
+            PORTB^= RB7PORTB;
             flag|= DISPPRINT;
         }
         
         T0IF=0;
     }
+    //RX SERIALE
     if(RCIF){
         //quando riceve un byte in seriale salva nell'array e aumenta l'indice
         dataReceived[indexReceived++]= RCREG;
@@ -255,7 +266,8 @@ void clearBuff(unsigned char *buf, unsigned char dim, unsigned char *index){
 
 //decodifica il messaggio
 void decode(){
-    if(dataReceived[RXADDRESS] == MYADDRESS || dataReceived[RXADDRESS] == BROADCASTADDRESS){
+    if(dataReceived[RXADDRESS] == MYADDRESS || 
+            dataReceived[RXADDRESS] == BROADCASTADDRESS){
         decine=dataReceived[DCADDRESS];
         unita=dataReceived[UNADDRESS];
     }
@@ -268,13 +280,10 @@ void decode(){
 // <editor-fold defaultstate="collapsed" desc="DISPLAY SECTION">
 
 //mand i singoli caratteri all'LCD
-void LCD_Send(char data, char mode)
-{
-    //portare a 1 ( PORT |= byte ) 
-    //portare a 0 ( PORT &= ~byte )
+void LCD_Send(char data, char mode){
     PORTE |= L_EN;
     PORTD = data;   
-    (mode) ? (PORTE = PORTE & ~L_RS) : (PORTE |= L_RS); //(true) ? (se vero)CMD : (se falso)DATA
+    (mode) ? (PORTE = PORTE & ~L_RS) : (PORTE |= L_RS); //(vero)CMD:(falso)DATA
     __delay_ms(3);
     PORTE &= ~L_EN;
     __delay_ms(3);
@@ -282,8 +291,7 @@ void LCD_Send(char data, char mode)
 }
 
 //passa ogni carattere della stringa all'LCD_Send
-void LCD_Write(char phrase[])
-{
+void LCD_Write(char phrase[]){
     //if(phrase[j] == '\0')
     for(int j = 0; j < 32; j++)
     {

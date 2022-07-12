@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Davide\AppData\Local\Temp\xcAsq8o.o
+$C:\Users\Davide\AppData\Local\Temp\xcAsir8.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 E E 3 2
 config CONFIG 4 2007 2007 1 2
@@ -21,8 +21,8 @@ text1 CODE 0 233 233 34 2
 text2 CODE 0 F5 F5 5B 2
 text3 CODE 0 2AE 2AE 19 2
 text4 CODE 0 8D 8D 68 2
-text5 CODE 0 1D 1D 70 2
-text6 CODE 0 2EB 2EB B 2
+text5 CODE 0 2EB 2EB B 2
+text6 CODE 0 1D 1D 70 2
 text7 CODE 0 2C7 2C7 15 2
 text8 CODE 0 293 293 1B 2
 text9 CODE 0 2F6 2F6 7 2
@@ -83,94 +83,94 @@ STRING 2FD-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\EsameFinaleITS_DIQU.X.production.o
-11 cinit CODE >455:C:\Users\Davide\AppData\Local\Temp\xcAsq8o.s
-11 cinit CODE >458:C:\Users\Davide\AppData\Local\Temp\xcAsq8o.s
-11 cinit CODE >478:C:\Users\Davide\AppData\Local\Temp\xcAsq8o.s
-12 cinit CODE >479:C:\Users\Davide\AppData\Local\Temp\xcAsq8o.s
-13 cinit CODE >480:C:\Users\Davide\AppData\Local\Temp\xcAsq8o.s
-14 cinit CODE >481:C:\Users\Davide\AppData\Local\Temp\xcAsq8o.s
-15 cinit CODE >482:C:\Users\Davide\AppData\Local\Temp\xcAsq8o.s
-16 cinit CODE >483:C:\Users\Davide\AppData\Local\Temp\xcAsq8o.s
-17 cinit CODE >484:C:\Users\Davide\AppData\Local\Temp\xcAsq8o.s
-18 cinit CODE >485:C:\Users\Davide\AppData\Local\Temp\xcAsq8o.s
-19 cinit CODE >491:C:\Users\Davide\AppData\Local\Temp\xcAsq8o.s
-19 cinit CODE >493:C:\Users\Davide\AppData\Local\Temp\xcAsq8o.s
-1A cinit CODE >494:C:\Users\Davide\AppData\Local\Temp\xcAsq8o.s
-4 intentry CODE >217:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-1F7 text12 CODE >217:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-1F7 text12 CODE >218:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-1FB text12 CODE >220:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-1FF text12 CODE >222:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-203 text12 CODE >224:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-205 text12 CODE >224:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-209 text12 CODE >225:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-20A text12 CODE >226:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-20E text12 CODE >227:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-20F text12 CODE >230:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-210 text12 CODE >232:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-216 text12 CODE >234:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-222 text12 CODE >235:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-228 text12 CODE >237:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-229 text12 CODE >238:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-229 text12 CODE >239:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-22A text12 CODE >241:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-267 text11 CODE >272:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-268 text11 CODE >276:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-26B text11 CODE >277:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-26D text11 CODE >278:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-277 text11 CODE >279:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-280 text11 CODE >280:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-286 text11 CODE >281:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-28F text11 CODE >282:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-292 text11 CODE >283:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-150 text10 CODE >286:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-153 text10 CODE >289:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-155 text10 CODE >291:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-160 text10 CODE >291:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-165 text10 CODE >292:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-174 text10 CODE >293:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-185 text10 CODE >294:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-195 text10 CODE >295:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-199 text10 CODE >295:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-1A2 text10 CODE >295:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-1A6 text10 CODE >295:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-1AA text10 CODE >296:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-2F6 text9 CODE >299:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-2F6 text9 CODE >300:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-2FC text9 CODE >301:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-293 text8 CODE >304:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-293 text8 CODE >305:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-29B text8 CODE >306:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-2A4 text8 CODE >307:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-2AD text8 CODE >308:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-2C7 text7 CODE >258:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-2C7 text7 CODE >259:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-2D3 text7 CODE >260:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-2D7 text7 CODE >261:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-2DB text7 CODE >263:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-2EB text6 CODE >153:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-2EB text6 CODE >155:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-2ED text6 CODE >157:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-2F1 text6 CODE >159:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-2F5 text6 CODE >160:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-1D text5 CODE >187:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-1D text5 CODE >190:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-23 text5 CODE >192:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-24 text5 CODE >194:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-2A text5 CODE >195:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-2E text5 CODE >196:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-37 text5 CODE >197:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-3A text5 CODE >198:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-42 text5 CODE >199:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-4B text5 CODE >200:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-53 text5 CODE >201:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-5C text5 CODE >202:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-64 text5 CODE >203:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-6C text5 CODE >204:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-74 text5 CODE >205:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-7C text5 CODE >206:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-84 text5 CODE >207:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-8C text5 CODE >208:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+11 cinit CODE >455:C:\Users\Davide\AppData\Local\Temp\xcAsir8.s
+11 cinit CODE >458:C:\Users\Davide\AppData\Local\Temp\xcAsir8.s
+11 cinit CODE >478:C:\Users\Davide\AppData\Local\Temp\xcAsir8.s
+12 cinit CODE >479:C:\Users\Davide\AppData\Local\Temp\xcAsir8.s
+13 cinit CODE >480:C:\Users\Davide\AppData\Local\Temp\xcAsir8.s
+14 cinit CODE >481:C:\Users\Davide\AppData\Local\Temp\xcAsir8.s
+15 cinit CODE >482:C:\Users\Davide\AppData\Local\Temp\xcAsir8.s
+16 cinit CODE >483:C:\Users\Davide\AppData\Local\Temp\xcAsir8.s
+17 cinit CODE >484:C:\Users\Davide\AppData\Local\Temp\xcAsir8.s
+18 cinit CODE >485:C:\Users\Davide\AppData\Local\Temp\xcAsir8.s
+19 cinit CODE >491:C:\Users\Davide\AppData\Local\Temp\xcAsir8.s
+19 cinit CODE >493:C:\Users\Davide\AppData\Local\Temp\xcAsir8.s
+1A cinit CODE >494:C:\Users\Davide\AppData\Local\Temp\xcAsir8.s
+4 intentry CODE >225:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+1F7 text12 CODE >225:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+1F7 text12 CODE >227:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+1FB text12 CODE >229:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+1FF text12 CODE >231:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+203 text12 CODE >233:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+205 text12 CODE >233:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+209 text12 CODE >234:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+20A text12 CODE >235:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+20E text12 CODE >236:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+20F text12 CODE >239:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+210 text12 CODE >242:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+216 text12 CODE >244:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+222 text12 CODE >245:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+228 text12 CODE >247:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+229 text12 CODE >248:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+229 text12 CODE >249:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+22A text12 CODE >251:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+267 text11 CODE >283:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+268 text11 CODE >284:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+26B text11 CODE >285:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+26D text11 CODE >286:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+277 text11 CODE >287:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+280 text11 CODE >288:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+286 text11 CODE >289:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+28F text11 CODE >290:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+292 text11 CODE >291:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+150 text10 CODE >294:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+153 text10 CODE >296:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+155 text10 CODE >298:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+160 text10 CODE >298:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+165 text10 CODE >299:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+174 text10 CODE >300:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+185 text10 CODE >301:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+195 text10 CODE >302:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+199 text10 CODE >302:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+1A2 text10 CODE >302:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+1A6 text10 CODE >302:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+1AA text10 CODE >303:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2F6 text9 CODE >306:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2F6 text9 CODE >307:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2FC text9 CODE >308:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+293 text8 CODE >311:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+293 text8 CODE >312:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+29B text8 CODE >313:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2A4 text8 CODE >314:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2AD text8 CODE >315:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2C7 text7 CODE >268:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2C7 text7 CODE >269:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2D3 text7 CODE >271:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2D7 text7 CODE >272:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2DB text7 CODE >274:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+1D text6 CODE >196:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+1D text6 CODE >198:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+23 text6 CODE >200:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+24 text6 CODE >202:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2A text6 CODE >203:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2E text6 CODE >204:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+37 text6 CODE >205:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+3A text6 CODE >206:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+42 text6 CODE >207:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+4B text6 CODE >208:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+53 text6 CODE >209:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+5C text6 CODE >210:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+64 text6 CODE >211:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+6C text6 CODE >212:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+74 text6 CODE >213:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+7C text6 CODE >214:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+84 text6 CODE >215:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+8C text6 CODE >216:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2EB text5 CODE >162:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2EB text5 CODE >164:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2ED text5 CODE >166:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2F1 text5 CODE >168:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2F5 text5 CODE >169:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
 8D text4 CODE >5:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\__lldiv.c
 8D text4 CODE >13:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\__lldiv.c
 95 text4 CODE >14:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\__lldiv.c
@@ -199,55 +199,55 @@ E4 text4 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\__
 E6 text4 CODE >27:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\__lldiv.c
 EC text4 CODE >29:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\__lldiv.c
 F4 text4 CODE >30:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\__lldiv.c
-2AE text3 CODE >250:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-2AF text3 CODE >251:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-2B1 text3 CODE >252:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-2B8 text3 CODE >253:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-2BE text3 CODE >253:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-2C2 text3 CODE >254:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-2C6 text3 CODE >255:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-F5 text2 CODE >163:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-F5 text2 CODE >165:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-FD text2 CODE >167:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-FE text2 CODE >170:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-106 text2 CODE >172:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-10C text2 CODE >174:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-115 text2 CODE >174:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-11B text2 CODE >174:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-139 text2 CODE >177:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-13A text2 CODE >178:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-13B text2 CODE >180:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-13C text2 CODE >182:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-14C text2 CODE >183:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-14F text2 CODE >184:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-233 text1 CODE >133:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-233 text1 CODE >135:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-236 text1 CODE >136:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-237 text1 CODE >137:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-238 text1 CODE >138:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-239 text1 CODE >139:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-23A text1 CODE >141:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-23D text1 CODE >142:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-241 text1 CODE >143:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-245 text1 CODE >144:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-249 text1 CODE >145:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-24D text1 CODE >147:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-252 text1 CODE >148:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-261 text1 CODE >149:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-266 text1 CODE >150:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-1AB maintext CODE >107:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-1AB maintext CODE >108:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-1B0 maintext CODE >109:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-1B5 maintext CODE >111:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-1BC maintext CODE >113:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-1C1 maintext CODE >115:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-1D1 maintext CODE >116:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-1D7 maintext CODE >119:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-1DC maintext CODE >120:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-1DE maintext CODE >120:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-1E4 maintext CODE >120:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-1E8 maintext CODE >122:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
-1ED maintext CODE >124:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2AE text3 CODE >260:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2AF text3 CODE >261:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2B1 text3 CODE >262:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2B8 text3 CODE >263:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2BE text3 CODE >263:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2C2 text3 CODE >264:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+2C6 text3 CODE >265:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+F5 text2 CODE >172:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+F5 text2 CODE >174:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+FD text2 CODE >176:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+FE text2 CODE >179:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+106 text2 CODE >181:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+10C text2 CODE >183:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+115 text2 CODE >183:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+11B text2 CODE >183:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+139 text2 CODE >186:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+13A text2 CODE >187:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+13B text2 CODE >189:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+13C text2 CODE >191:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+14C text2 CODE >192:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+14F text2 CODE >193:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+233 text1 CODE >142:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+233 text1 CODE >144:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+236 text1 CODE >145:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+237 text1 CODE >146:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+238 text1 CODE >147:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+239 text1 CODE >148:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+23A text1 CODE >150:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+23D text1 CODE >151:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+241 text1 CODE >152:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+245 text1 CODE >153:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+249 text1 CODE >154:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+24D text1 CODE >156:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+252 text1 CODE >157:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+261 text1 CODE >158:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+266 text1 CODE >159:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+1AB maintext CODE >114:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+1AB maintext CODE >115:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+1B0 maintext CODE >116:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+1B5 maintext CODE >118:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+1BC maintext CODE >120:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+1C1 maintext CODE >122:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+1D1 maintext CODE >123:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+1D7 maintext CODE >126:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+1DC maintext CODE >127:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+1DE maintext CODE >127:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+1E4 maintext CODE >127:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+1E8 maintext CODE >129:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
+1ED maintext CODE >131:C:\DIQU-2021\ExamDIQU\uCProgram\EsameFinaleITS_DIQU.X\EsameFinaleMain.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -273,28 +273,27 @@ _PIE1 8C 0 ABS 0 - dist/default/production\EsameFinaleITS_DIQU.X.production.o
 _RCIF 65 0 ABS 0 - dist/default/production\EsameFinaleITS_DIQU.X.production.o
 _T0IF 5A 0 ABS 0 - dist/default/production\EsameFinaleITS_DIQU.X.production.o
 _TMR0 1 0 ABS 0 - dist/default/production\EsameFinaleITS_DIQU.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Davide\AppData\Local\Temp\xcAsq8o.o
+___sp 0 0 STACK 2 stack C:\Users\Davide\AppData\Local\Temp\xcAsir8.o
 _flag 33 0 BANK0 1 bssBANK0 dist/default/production\EsameFinaleITS_DIQU.X.production.o
 _main 356 0 CODE 0 maintext dist/default/production\EsameFinaleITS_DIQU.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\EsameFinaleITS_DIQU.X.production.o
-start 1C 0 CODE 0 init C:\Users\Davide\AppData\Local\Temp\xcAsq8o.o
+start 1C 0 CODE 0 init C:\Users\Davide\AppData\Local\Temp\xcAsir8.o
 __size_of_main 0 0 ABS 0 - dist/default/production\EsameFinaleITS_DIQU.X.production.o
 __size_of___lldiv 0 0 ABS 0 - dist/default/production\EsameFinaleITS_DIQU.X.production.o
-_LCD_Init 3A 0 CODE 0 text5 dist/default/production\EsameFinaleITS_DIQU.X.production.o
+_LCD_Init 3A 0 CODE 0 text6 dist/default/production\EsameFinaleITS_DIQU.X.production.o
 _LCD_Send 4CE 0 CODE 0 text11 dist/default/production\EsameFinaleITS_DIQU.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 _timeCount 34 0 BANK0 1 bssBANK0 dist/default/production\EsameFinaleITS_DIQU.X.production.o
-__end_of_LCD_Init 11A 0 CODE 0 text5 dist/default/production\EsameFinaleITS_DIQU.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Davide\AppData\Local\Temp\xcAsq8o.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Davide\AppData\Local\Temp\xcAsq8o.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Davide\AppData\Local\Temp\xcAsq8o.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Davide\AppData\Local\Temp\xcAsq8o.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Davide\AppData\Local\Temp\xcAsq8o.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Davide\AppData\Local\Temp\xcAsq8o.o
+__end_of_LCD_Init 11A 0 CODE 0 text6 dist/default/production\EsameFinaleITS_DIQU.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Davide\AppData\Local\Temp\xcAsir8.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Davide\AppData\Local\Temp\xcAsir8.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Davide\AppData\Local\Temp\xcAsir8.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Davide\AppData\Local\Temp\xcAsir8.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Davide\AppData\Local\Temp\xcAsir8.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Davide\AppData\Local\Temp\xcAsir8.o
 __end_of_LCD_Send 526 0 CODE 0 text11 dist/default/production\EsameFinaleITS_DIQU.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\EsameFinaleITS_DIQU.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
-__size_of_ISR_Init 0 0 ABS 0 - dist/default/production\EsameFinaleITS_DIQU.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
 UART_Init@baudRate 28 0 BANK0 1 cstackBANK0 dist/default/production\EsameFinaleITS_DIQU.X.production.o
 __size_of_initPic 0 0 ABS 0 - dist/default/production\EsameFinaleITS_DIQU.X.production.o
@@ -305,16 +304,14 @@ LCD_Write@phrase 20 0 BANK0 1 cstackBANK0 dist/default/production\EsameFinaleITS
 __end_of_decode 5B8 0 CODE 0 text7 dist/default/production\EsameFinaleITS_DIQU.X.production.o
 _INTCON B 0 ABS 0 - dist/default/production\EsameFinaleITS_DIQU.X.production.o
 _OPTION_REG 81 0 ABS 0 - dist/default/production\EsameFinaleITS_DIQU.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Davide\AppData\Local\Temp\xcAsq8o.o
-___stacklo 0 0 ABS 0 - C:\Users\Davide\AppData\Local\Temp\xcAsq8o.o
-_ISR_Init 5D6 0 CODE 0 text6 dist/default/production\EsameFinaleITS_DIQU.X.production.o
-__end_of_ISR_Init 5EC 0 CODE 0 text6 dist/default/production\EsameFinaleITS_DIQU.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\Davide\AppData\Local\Temp\xcAsir8.o
+___stacklo 0 0 ABS 0 - C:\Users\Davide\AppData\Local\Temp\xcAsir8.o
 ___lldiv@counter 79 0 COMMON 1 cstackCOMMON dist/default/production\EsameFinaleITS_DIQU.X.production.o
 start_initialization 22 0 CODE 0 cinit dist/default/production\EsameFinaleITS_DIQU.X.production.o
 ___lldiv@dividend 24 0 BANK0 1 cstackBANK0 dist/default/production\EsameFinaleITS_DIQU.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\EsameFinaleITS_DIQU.X.production.o
 __end_of_initPic 4CE 0 CODE 0 text1 dist/default/production\EsameFinaleITS_DIQU.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Davide\AppData\Local\Temp\xcAsq8o.o
+___int_sp 0 0 STACK 2 stack C:\Users\Davide\AppData\Local\Temp\xcAsir8.o
 __end_of_LCD_Start 5FA 0 CODE 0 text9 dist/default/production\EsameFinaleITS_DIQU.X.production.o
 __end_of_LCD_Value 55C 0 CODE 0 text8 dist/default/production\EsameFinaleITS_DIQU.X.production.o
 __end_of_LCD_Write 356 0 CODE 0 text10 dist/default/production\EsameFinaleITS_DIQU.X.production.o
@@ -366,6 +363,7 @@ __S0 2FD 0 ABS 0 - -
 __S1 7A 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
+__size_of_TMR_Init 0 0 ABS 0 - dist/default/production\EsameFinaleITS_DIQU.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\EsameFinaleITS_DIQU.X.production.o
 _decine 3C 0 BANK0 1 nvBANK0 dist/default/production\EsameFinaleITS_DIQU.X.production.o
 _decode 58E 0 CODE 0 text7 dist/default/production\EsameFinaleITS_DIQU.X.production.o
@@ -374,7 +372,7 @@ __HnvBANK0 0 0 ABS 0 nvBANK0 -
 __Lintentry 8 0 CODE 0 intentry -
 ___lldiv@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\EsameFinaleITS_DIQU.X.production.o
 __stringtab 5B8 0 STRING 0 strings dist/default/production\EsameFinaleITS_DIQU.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Davide\AppData\Local\Temp\xcAsq8o.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Davide\AppData\Local\Temp\xcAsir8.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 clearBuff@i 78 0 COMMON 1 cstackCOMMON dist/default/production\EsameFinaleITS_DIQU.X.production.o
 _oldDecine 3A 0 BANK0 1 nvBANK0 dist/default/production\EsameFinaleITS_DIQU.X.production.o
@@ -383,9 +381,11 @@ __ptext11 4CE 0 CODE 0 text11 dist/default/production\EsameFinaleITS_DIQU.X.prod
 __ptext12 3EE 0 CODE 0 text12 dist/default/production\EsameFinaleITS_DIQU.X.production.o
 ___lldiv 11A 0 CODE 0 text4 dist/default/production\EsameFinaleITS_DIQU.X.production.o
 __pmaintext 356 0 CODE 0 maintext dist/default/production\EsameFinaleITS_DIQU.X.production.o
+_TMR_Init 5D6 0 CODE 0 text5 dist/default/production\EsameFinaleITS_DIQU.X.production.o
 __size_of_decode 0 0 ABS 0 - dist/default/production\EsameFinaleITS_DIQU.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
+__end_of_TMR_Init 5EC 0 CODE 0 text5 dist/default/production\EsameFinaleITS_DIQU.X.production.o
 __end_of_clearBuff 58E 0 CODE 0 text3 dist/default/production\EsameFinaleITS_DIQU.X.production.o
 __size_of_clearBuff 0 0 ABS 0 - dist/default/production\EsameFinaleITS_DIQU.X.production.o
 clearBuff@index 75 0 COMMON 1 cstackCOMMON dist/default/production\EsameFinaleITS_DIQU.X.production.o
@@ -414,8 +414,8 @@ __ptext1 466 0 CODE 0 text1 dist/default/production\EsameFinaleITS_DIQU.X.produc
 __ptext2 1EA 0 CODE 0 text2 dist/default/production\EsameFinaleITS_DIQU.X.production.o
 __ptext3 55C 0 CODE 0 text3 dist/default/production\EsameFinaleITS_DIQU.X.production.o
 __ptext4 11A 0 CODE 0 text4 dist/default/production\EsameFinaleITS_DIQU.X.production.o
-__ptext5 3A 0 CODE 0 text5 dist/default/production\EsameFinaleITS_DIQU.X.production.o
-__ptext6 5D6 0 CODE 0 text6 dist/default/production\EsameFinaleITS_DIQU.X.production.o
+__ptext5 5D6 0 CODE 0 text5 dist/default/production\EsameFinaleITS_DIQU.X.production.o
+__ptext6 3A 0 CODE 0 text6 dist/default/production\EsameFinaleITS_DIQU.X.production.o
 __ptext7 58E 0 CODE 0 text7 dist/default/production\EsameFinaleITS_DIQU.X.production.o
 __ptext8 526 0 CODE 0 text8 dist/default/production\EsameFinaleITS_DIQU.X.production.o
 __ptext9 5EC 0 CODE 0 text9 dist/default/production\EsameFinaleITS_DIQU.X.production.o
@@ -481,7 +481,7 @@ __size_of_LCD_Send 0 0 ABS 0 - dist/default/production\EsameFinaleITS_DIQU.X.pro
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text6 0 2EB 5D6 12 2
+text5 0 2EB 5D6 12 2
 cstackCOMMON 1 70 70 A 1
 cstackBANK0 1 20 20 1D 1
 intentry 0 4 8 2D8 2

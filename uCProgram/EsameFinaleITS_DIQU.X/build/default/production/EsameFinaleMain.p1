@@ -1,19 +1,19 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"87 EsameFinaleMain.c
-[; ;EsameFinaleMain.c: 87: void initPic(void);
+"94 EsameFinaleMain.c
+[; ;EsameFinaleMain.c: 94: void initPic(void);
 [v _initPic `(v ~T0 @X0 0 ef ]
-"95
-[; ;EsameFinaleMain.c: 95: void LCD_Start(void);
+"102
+[; ;EsameFinaleMain.c: 102: void LCD_Start(void);
 [v _LCD_Start `(v ~T0 @X0 0 ef ]
-"91
-[; ;EsameFinaleMain.c: 91: void decode(void);
+"98
+[; ;EsameFinaleMain.c: 98: void decode(void);
 [v _decode `(v ~T0 @X0 0 ef ]
-"90
-[; ;EsameFinaleMain.c: 90: void clearBuff(unsigned char *, unsigned char, unsigned char *);
+"97
+[; ;EsameFinaleMain.c: 97: void clearBuff(unsigned char *, unsigned char, unsigned char *);
 [v _clearBuff `(v ~T0 @X0 0 ef3`*uc`uc`*uc ]
-"96
-[; ;EsameFinaleMain.c: 96: void LCD_Value(void);
+"103
+[; ;EsameFinaleMain.c: 103: void LCD_Value(void);
 [v _LCD_Value `(v ~T0 @X0 0 ef ]
 "1325 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1325: extern volatile unsigned char TRISA __attribute__((address(0x085)));
@@ -30,14 +30,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1561
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1561: extern volatile unsigned char TRISE __attribute__((address(0x089)));
 [v _TRISE `Vuc ~T0 @X0 0 e@137 ]
-"88 EsameFinaleMain.c
-[; ;EsameFinaleMain.c: 88: void ISR_Init(void);
-[v _ISR_Init `(v ~T0 @X0 0 ef ]
-"89
-[; ;EsameFinaleMain.c: 89: void UART_Init(long int);
+"95 EsameFinaleMain.c
+[; ;EsameFinaleMain.c: 95: void TMR_Init(void);
+[v _TMR_Init `(v ~T0 @X0 0 ef ]
+"96
+[; ;EsameFinaleMain.c: 96: void UART_Init(long int);
 [v _UART_Init `(v ~T0 @X0 0 ef1`l ]
-"92
-[; ;EsameFinaleMain.c: 92: void LCD_Init(void);
+"99
+[; ;EsameFinaleMain.c: 99: void LCD_Init(void);
 [v _LCD_Init `(v ~T0 @X0 0 ef ]
 "454 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 454: extern volatile unsigned char INTCON __attribute__((address(0x00B)));
@@ -67,8 +67,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "92 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
 [v __delay `JF842 ~T0 @X0 0 e ]
 [p i __delay ]
-"93 EsameFinaleMain.c
-[; ;EsameFinaleMain.c: 93: void LCD_Send(char, char);
+"100 EsameFinaleMain.c
+[; ;EsameFinaleMain.c: 100: void LCD_Send(char, char);
 [v _LCD_Send `(v ~T0 @X0 0 ef2`uc`uc ]
 [t ~ __interrupt . k ]
 [t T1 __interrupt ]
@@ -87,21 +87,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "340
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 340: extern volatile unsigned char PORTD __attribute__((address(0x008)));
 [v _PORTD `Vuc ~T0 @X0 0 e@8 ]
-"14 EsameFinaleMain.c
+"10 EsameFinaleMain.c
 [p x FOSC  =  HS  ]
-"15
+"11
 [p x WDTE  =  OFF  ]
-"16
+"12
 [p x PWRTE  =  ON  ]
-"17
+"13
 [p x BOREN  =  ON  ]
-"18
+"14
 [p x LVP  =  ON  ]
-"21
+"17
 [p x CPD  =  OFF  ]
-"23
+"19
 [p x WRT  =  OFF  ]
-"25
+"21
 [p x CP  =  OFF  ]
 "54 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 54: __asm("INDF equ 00h");
@@ -283,342 +283,340 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2363
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"98 EsameFinaleMain.c
-[; ;EsameFinaleMain.c: 98: unsigned char timeCount;
+"105 EsameFinaleMain.c
+[; ;EsameFinaleMain.c: 105: unsigned char timeCount;
 [v _timeCount `uc ~T0 @X0 1 e ]
-"99
-[; ;EsameFinaleMain.c: 99: unsigned char dataReceived[3];
+"106
+[; ;EsameFinaleMain.c: 106: unsigned char dataReceived[3];
 [v _dataReceived `uc ~T0 @X0 -> 3 `i e ]
-"100
-[; ;EsameFinaleMain.c: 100: unsigned char indexReceived;
+"107
+[; ;EsameFinaleMain.c: 107: unsigned char indexReceived;
 [v _indexReceived `uc ~T0 @X0 1 e ]
-"101
-[; ;EsameFinaleMain.c: 101: char flag;
+"108
+[; ;EsameFinaleMain.c: 108: char flag;
 [v _flag `uc ~T0 @X0 1 e ]
-"102
-[; ;EsameFinaleMain.c: 102: char decine;
+"109
+[; ;EsameFinaleMain.c: 109: char decine;
 [v _decine `uc ~T0 @X0 1 e ]
-"103
-[; ;EsameFinaleMain.c: 103: char unita;
+"110
+[; ;EsameFinaleMain.c: 110: char unita;
 [v _unita `uc ~T0 @X0 1 e ]
-"104
-[; ;EsameFinaleMain.c: 104: char oldDecine;
+"111
+[; ;EsameFinaleMain.c: 111: char oldDecine;
 [v _oldDecine `uc ~T0 @X0 1 e ]
-"105
-[; ;EsameFinaleMain.c: 105: char oldUnita;
+"112
+[; ;EsameFinaleMain.c: 112: char oldUnita;
 [v _oldUnita `uc ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"107
-[; ;EsameFinaleMain.c: 107: void main(void) {
+"114
+[; ;EsameFinaleMain.c: 114: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"108
-[; ;EsameFinaleMain.c: 108:     initPic();
+"115
+[; ;EsameFinaleMain.c: 115:     initPic();
 [e ( _initPic ..  ]
-"109
-[; ;EsameFinaleMain.c: 109:     LCD_Start();
+"116
+[; ;EsameFinaleMain.c: 116:     LCD_Start();
 [e ( _LCD_Start ..  ]
-"110
-[; ;EsameFinaleMain.c: 110:     while(1){
+"117
+[; ;EsameFinaleMain.c: 117:     while(1){
 [e :U 97 ]
 {
-"111
-[; ;EsameFinaleMain.c: 111:         if(flag && 0x01){
+"118
+[; ;EsameFinaleMain.c: 118:         if(flag && 0x01){
 [e $ ! && != -> _flag `i -> 0 `i != -> 1 `i -> 0 `i 99  ]
 {
-"113
-[; ;EsameFinaleMain.c: 113:             decode();
+"120
+[; ;EsameFinaleMain.c: 120:             decode();
 [e ( _decode ..  ]
-"115
-[; ;EsameFinaleMain.c: 115:             clearBuff(dataReceived, 3, &indexReceived);
+"122
+[; ;EsameFinaleMain.c: 122:             clearBuff(dataReceived, 3, &indexReceived);
 [e ( _clearBuff (3 , , &U _dataReceived -> -> 3 `i `uc &U _indexReceived ]
-"116
-[; ;EsameFinaleMain.c: 116:             flag &= ~0x01;
+"123
+[; ;EsameFinaleMain.c: 123:             flag &= ~0x01;
 [e =& _flag -> ~ -> 1 `i `uc ]
-"117
-[; ;EsameFinaleMain.c: 117:         }
+"124
+[; ;EsameFinaleMain.c: 124:         }
 }
 [e :U 99 ]
-"119
-[; ;EsameFinaleMain.c: 119:         if(flag && 0x02){
+"126
+[; ;EsameFinaleMain.c: 126:         if(flag && 0x02){
 [e $ ! && != -> _flag `i -> 0 `i != -> 2 `i -> 0 `i 100  ]
 {
-"120
-[; ;EsameFinaleMain.c: 120:             if(oldDecine!=decine || oldUnita!=unita)
+"127
+[; ;EsameFinaleMain.c: 127:             if(oldDecine!=decine || oldUnita!=unita)
 [e $ ! || != -> _oldDecine `i -> _decine `i != -> _oldUnita `i -> _unita `i 101  ]
-"121
-[; ;EsameFinaleMain.c: 121:             {
+"128
+[; ;EsameFinaleMain.c: 128:             {
 {
-"122
-[; ;EsameFinaleMain.c: 122:                 LCD_Value();
+"129
+[; ;EsameFinaleMain.c: 129:                 LCD_Value();
 [e ( _LCD_Value ..  ]
-"123
-[; ;EsameFinaleMain.c: 123:             }
+"130
+[; ;EsameFinaleMain.c: 130:             }
 }
 [e :U 101 ]
-"124
-[; ;EsameFinaleMain.c: 124:             flag &= ~0x02;
+"131
+[; ;EsameFinaleMain.c: 131:             flag &= ~0x02;
 [e =& _flag -> ~ -> 2 `i `uc ]
-"125
-[; ;EsameFinaleMain.c: 125:         }
+"132
+[; ;EsameFinaleMain.c: 132:         }
 }
 [e :U 100 ]
-"126
-[; ;EsameFinaleMain.c: 126:     }
+"133
+[; ;EsameFinaleMain.c: 133:     }
 }
 [e :U 96 ]
 [e $U 97  ]
 [e :U 98 ]
-"127
-[; ;EsameFinaleMain.c: 127:     return;
+"134
+[; ;EsameFinaleMain.c: 134:     return;
 [e $UE 95  ]
-"128
-[; ;EsameFinaleMain.c: 128: }
+"135
+[; ;EsameFinaleMain.c: 135: }
 [e :UE 95 ]
 }
-"133
-[; ;EsameFinaleMain.c: 133: void initPic(){
+"142
+[; ;EsameFinaleMain.c: 142: void initPic(){
 [v _initPic `(v ~T0 @X0 1 ef ]
 {
 [e :U _initPic ]
 [f ]
-"135
-[; ;EsameFinaleMain.c: 135:     TRISA= 0x00;
-[e = _TRISA -> -> 0 `i `uc ]
-"136
-[; ;EsameFinaleMain.c: 136:     TRISB= 0x00;
-[e = _TRISB -> -> 0 `i `uc ]
-"137
-[; ;EsameFinaleMain.c: 137:     TRISC= 0x00;
-[e = _TRISC -> -> 0 `i `uc ]
-"138
-[; ;EsameFinaleMain.c: 138:     TRISD= 0x00;
-[e = _TRISD -> -> 0 `i `uc ]
-"139
-[; ;EsameFinaleMain.c: 139:     TRISE= 0x00;
-[e = _TRISE -> -> 0 `i `uc ]
-"141
-[; ;EsameFinaleMain.c: 141:     timeCount= 0;
-[e = _timeCount -> -> 0 `i `uc ]
-"142
-[; ;EsameFinaleMain.c: 142:     decine= 0x30;
-[e = _decine -> -> 48 `i `uc ]
-"143
-[; ;EsameFinaleMain.c: 143:     unita= 0x30;
-[e = _unita -> -> 48 `i `uc ]
 "144
-[; ;EsameFinaleMain.c: 144:     oldDecine= 0x39;
-[e = _oldDecine -> -> 57 `i `uc ]
+[; ;EsameFinaleMain.c: 144:     TRISA= 0x00;
+[e = _TRISA -> -> 0 `i `uc ]
 "145
-[; ;EsameFinaleMain.c: 145:     oldUnita= 0x39;
-[e = _oldUnita -> -> 57 `i `uc ]
+[; ;EsameFinaleMain.c: 145:     TRISB= 0x00;
+[e = _TRISB -> -> 0 `i `uc ]
+"146
+[; ;EsameFinaleMain.c: 146:     TRISC= 0x00;
+[e = _TRISC -> -> 0 `i `uc ]
 "147
-[; ;EsameFinaleMain.c: 147:     ISR_Init();
-[e ( _ISR_Init ..  ]
+[; ;EsameFinaleMain.c: 147:     TRISD= 0x00;
+[e = _TRISD -> -> 0 `i `uc ]
 "148
-[; ;EsameFinaleMain.c: 148:     UART_Init(9600);
-[e ( _UART_Init (1 -> -> 9600 `i `l ]
-"149
-[; ;EsameFinaleMain.c: 149:     LCD_Init();
-[e ( _LCD_Init ..  ]
+[; ;EsameFinaleMain.c: 148:     TRISE= 0x00;
+[e = _TRISE -> -> 0 `i `uc ]
 "150
-[; ;EsameFinaleMain.c: 150: }
+[; ;EsameFinaleMain.c: 150:     timeCount= 0;
+[e = _timeCount -> -> 0 `i `uc ]
+"151
+[; ;EsameFinaleMain.c: 151:     decine= 0x30;
+[e = _decine -> -> 48 `i `uc ]
+"152
+[; ;EsameFinaleMain.c: 152:     unita= 0x30;
+[e = _unita -> -> 48 `i `uc ]
+"153
+[; ;EsameFinaleMain.c: 153:     oldDecine= 0x39;
+[e = _oldDecine -> -> 57 `i `uc ]
+"154
+[; ;EsameFinaleMain.c: 154:     oldUnita= 0x39;
+[e = _oldUnita -> -> 57 `i `uc ]
+"156
+[; ;EsameFinaleMain.c: 156:     TMR_Init();
+[e ( _TMR_Init ..  ]
+"157
+[; ;EsameFinaleMain.c: 157:     UART_Init(9600);
+[e ( _UART_Init (1 -> -> 9600 `i `l ]
+"158
+[; ;EsameFinaleMain.c: 158:     LCD_Init();
+[e ( _LCD_Init ..  ]
+"159
+[; ;EsameFinaleMain.c: 159: }
 [e :UE 102 ]
 }
-"153
-[; ;EsameFinaleMain.c: 153: void ISR_Init(void){
-[v _ISR_Init `(v ~T0 @X0 1 ef ]
+"162
+[; ;EsameFinaleMain.c: 162: void TMR_Init(void){
+[v _TMR_Init `(v ~T0 @X0 1 ef ]
 {
-[e :U _ISR_Init ]
+[e :U _TMR_Init ]
 [f ]
-"155
-[; ;EsameFinaleMain.c: 155:     INTCON= 0xA0;
+"164
+[; ;EsameFinaleMain.c: 164:     INTCON= 0xA0;
 [e = _INTCON -> -> 160 `i `uc ]
-"157
-[; ;EsameFinaleMain.c: 157:     OPTION_REG= 0x07;
+"166
+[; ;EsameFinaleMain.c: 166:     OPTION_REG= 0x07;
 [e = _OPTION_REG -> -> 7 `i `uc ]
-"159
-[; ;EsameFinaleMain.c: 159:     TMR0= 6;
+"168
+[; ;EsameFinaleMain.c: 168:     TMR0= 6;
 [e = _TMR0 -> -> 6 `i `uc ]
-"160
-[; ;EsameFinaleMain.c: 160: }
+"169
+[; ;EsameFinaleMain.c: 169: }
 [e :UE 103 ]
 }
-"163
-[; ;EsameFinaleMain.c: 163: void UART_Init(long int baudRate){
+"172
+[; ;EsameFinaleMain.c: 172: void UART_Init(long int baudRate){
 [v _UART_Init `(v ~T0 @X0 1 ef1`l ]
 {
 [e :U _UART_Init ]
 [v _baudRate `l ~T0 @X0 1 r1 ]
 [f ]
-"165
-[; ;EsameFinaleMain.c: 165:     TRISC&= ~0x40;
-[e =& _TRISC -> ~ -> 64 `i `Vuc ]
-"167
-[; ;EsameFinaleMain.c: 167:     TRISC|= 0x80;
-[e =| _TRISC -> -> 128 `i `Vuc ]
-"170
-[; ;EsameFinaleMain.c: 170:     TXSTA|= 0x24;
-[e =| _TXSTA -> -> 36 `i `Vuc ]
-"172
-[; ;EsameFinaleMain.c: 172:     RCSTA|= 0x90;
-[e =| _RCSTA -> -> 144 `i `Vuc ]
 "174
-[; ;EsameFinaleMain.c: 174:     SPBRG= (char) (8000000/(unsigned long int) (64UL * (unsigned long int)baudRate))-1;
-[e = _SPBRG -> - -> -> / -> -> 8000000 `l `ul * -> 64 `ul -> _baudRate `ul `uc `i -> 1 `i `uc ]
-"177
-[; ;EsameFinaleMain.c: 177:     INTCON|= 0x80;
-[e =| _INTCON -> -> 128 `i `Vuc ]
-"178
-[; ;EsameFinaleMain.c: 178:     INTCON|= 0x40;
-[e =| _INTCON -> -> 64 `i `Vuc ]
-"180
-[; ;EsameFinaleMain.c: 180:     PIE1|= 0x20;
-[e =| _PIE1 -> -> 32 `i `Vuc ]
-"182
-[; ;EsameFinaleMain.c: 182:     clearBuff(dataReceived, 3, &indexReceived);
-[e ( _clearBuff (3 , , &U _dataReceived -> -> 3 `i `uc &U _indexReceived ]
+[; ;EsameFinaleMain.c: 174:     TRISC&= ~0x40;
+[e =& _TRISC -> ~ -> 64 `i `Vuc ]
+"176
+[; ;EsameFinaleMain.c: 176:     TRISC|= 0x80;
+[e =| _TRISC -> -> 128 `i `Vuc ]
+"179
+[; ;EsameFinaleMain.c: 179:     TXSTA|= 0x24;
+[e =| _TXSTA -> -> 36 `i `Vuc ]
+"181
+[; ;EsameFinaleMain.c: 181:     RCSTA|= 0x90;
+[e =| _RCSTA -> -> 144 `i `Vuc ]
 "183
-[; ;EsameFinaleMain.c: 183:     flag= 0;
+[; ;EsameFinaleMain.c: 183:     SPBRG= (char) (8000000/(unsigned long int) (64UL * (unsigned long int)baudRate))-1;
+[e = _SPBRG -> - -> -> / -> -> 8000000 `l `ul * -> 64 `ul -> _baudRate `ul `uc `i -> 1 `i `uc ]
+"186
+[; ;EsameFinaleMain.c: 186:     INTCON|= 0x80;
+[e =| _INTCON -> -> 128 `i `Vuc ]
+"187
+[; ;EsameFinaleMain.c: 187:     INTCON|= 0x40;
+[e =| _INTCON -> -> 64 `i `Vuc ]
+"189
+[; ;EsameFinaleMain.c: 189:     PIE1|= 0x20;
+[e =| _PIE1 -> -> 32 `i `Vuc ]
+"191
+[; ;EsameFinaleMain.c: 191:     clearBuff(dataReceived, 3, &indexReceived);
+[e ( _clearBuff (3 , , &U _dataReceived -> -> 3 `i `uc &U _indexReceived ]
+"192
+[; ;EsameFinaleMain.c: 192:     flag= 0;
 [e = _flag -> -> 0 `i `uc ]
-"184
-[; ;EsameFinaleMain.c: 184: }
+"193
+[; ;EsameFinaleMain.c: 193: }
 [e :UE 104 ]
 }
-"187
-[; ;EsameFinaleMain.c: 187: void LCD_Init()
+"196
+[; ;EsameFinaleMain.c: 196: void LCD_Init(){
 [v _LCD_Init `(v ~T0 @X0 1 ef ]
-"188
-[; ;EsameFinaleMain.c: 188: {
 {
 [e :U _LCD_Init ]
 [f ]
-"190
-[; ;EsameFinaleMain.c: 190:     TRISE &= ~0x06;
-[e =& _TRISE -> ~ -> 6 `i `Vuc ]
-"192
-[; ;EsameFinaleMain.c: 192:     TRISD &= 0x00;
-[e =& _TRISD -> -> 0 `i `Vuc ]
-"194
-[; ;EsameFinaleMain.c: 194:     PORTE &= ~0X04;
-[e =& _PORTE -> ~ -> 4 `i `Vuc ]
-"195
-[; ;EsameFinaleMain.c: 195:     PORTE &= ~0X02;
-[e =& _PORTE -> ~ -> 2 `i `Vuc ]
-"196
-[; ;EsameFinaleMain.c: 196:     _delay((unsigned long)((20)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"197
-[; ;EsameFinaleMain.c: 197:     PORTE |= 0X02;
-[e =| _PORTE -> -> 2 `i `Vuc ]
 "198
-[; ;EsameFinaleMain.c: 198:     LCD_Send(0X38, 1);
-[e ( _LCD_Send (2 , -> -> 56 `i `uc -> -> 1 `i `uc ]
-"199
-[; ;EsameFinaleMain.c: 199:     _delay((unsigned long)((5)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;EsameFinaleMain.c: 198:     TRISE &= ~0x06;
+[e =& _TRISE -> ~ -> 6 `i `Vuc ]
 "200
-[; ;EsameFinaleMain.c: 200:     LCD_Send(0X38, 1);
-[e ( _LCD_Send (2 , -> -> 56 `i `uc -> -> 1 `i `uc ]
-"201
-[; ;EsameFinaleMain.c: 201:     _delay((unsigned long)((1)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;EsameFinaleMain.c: 200:     TRISD &= 0x00;
+[e =& _TRISD -> -> 0 `i `Vuc ]
 "202
-[; ;EsameFinaleMain.c: 202:     LCD_Send(0X38, 1);
-[e ( _LCD_Send (2 , -> -> 56 `i `uc -> -> 1 `i `uc ]
+[; ;EsameFinaleMain.c: 202:     PORTE &= ~0X04;
+[e =& _PORTE -> ~ -> 4 `i `Vuc ]
 "203
-[; ;EsameFinaleMain.c: 203:     LCD_Send(0X08, 1);
-[e ( _LCD_Send (2 , -> -> 8 `i `uc -> -> 1 `i `uc ]
+[; ;EsameFinaleMain.c: 203:     PORTE &= ~0X02;
+[e =& _PORTE -> ~ -> 2 `i `Vuc ]
 "204
-[; ;EsameFinaleMain.c: 204:     LCD_Send(0X0C, 1);
-[e ( _LCD_Send (2 , -> -> 12 `i `uc -> -> 1 `i `uc ]
+[; ;EsameFinaleMain.c: 204:     _delay((unsigned long)((20)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "205
-[; ;EsameFinaleMain.c: 205:     LCD_Send(0X01, 1);
-[e ( _LCD_Send (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;EsameFinaleMain.c: 205:     PORTE |= 0X02;
+[e =| _PORTE -> -> 2 `i `Vuc ]
 "206
-[; ;EsameFinaleMain.c: 206:     LCD_Send(0X0E, 1);
-[e ( _LCD_Send (2 , -> -> 14 `i `uc -> -> 1 `i `uc ]
+[; ;EsameFinaleMain.c: 206:     LCD_Send(0X38, 1);
+[e ( _LCD_Send (2 , -> -> 56 `i `uc -> -> 1 `i `uc ]
 "207
-[; ;EsameFinaleMain.c: 207:     LCD_Send(0X80, 1);
-[e ( _LCD_Send (2 , -> -> 128 `i `uc -> -> 1 `i `uc ]
+[; ;EsameFinaleMain.c: 207:     _delay((unsigned long)((5)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "208
-[; ;EsameFinaleMain.c: 208: }
+[; ;EsameFinaleMain.c: 208:     LCD_Send(0X38, 1);
+[e ( _LCD_Send (2 , -> -> 56 `i `uc -> -> 1 `i `uc ]
+"209
+[; ;EsameFinaleMain.c: 209:     _delay((unsigned long)((1)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"210
+[; ;EsameFinaleMain.c: 210:     LCD_Send(0X38, 1);
+[e ( _LCD_Send (2 , -> -> 56 `i `uc -> -> 1 `i `uc ]
+"211
+[; ;EsameFinaleMain.c: 211:     LCD_Send(0X08, 1);
+[e ( _LCD_Send (2 , -> -> 8 `i `uc -> -> 1 `i `uc ]
+"212
+[; ;EsameFinaleMain.c: 212:     LCD_Send(0X0C, 1);
+[e ( _LCD_Send (2 , -> -> 12 `i `uc -> -> 1 `i `uc ]
+"213
+[; ;EsameFinaleMain.c: 213:     LCD_Send(0X01, 1);
+[e ( _LCD_Send (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"214
+[; ;EsameFinaleMain.c: 214:     LCD_Send(0X0E, 1);
+[e ( _LCD_Send (2 , -> -> 14 `i `uc -> -> 1 `i `uc ]
+"215
+[; ;EsameFinaleMain.c: 215:     LCD_Send(0X80, 1);
+[e ( _LCD_Send (2 , -> -> 128 `i `uc -> -> 1 `i `uc ]
+"216
+[; ;EsameFinaleMain.c: 216: }
 [e :UE 105 ]
 }
 [v $root$_ISR `(v ~T0 @X0 0 e ]
-"217
-[; ;EsameFinaleMain.c: 217: void __attribute__((picinterrupt(("")))) ISR(){
+"225
+[; ;EsameFinaleMain.c: 225: void __attribute__((picinterrupt(("")))) ISR(){
 [v _ISR `(v ~T1 @X0 1 ef ]
 {
 [e :U _ISR ]
 [f ]
-"218
-[; ;EsameFinaleMain.c: 218:     if(T0IF){
+"227
+[; ;EsameFinaleMain.c: 227:     if(T0IF){
 [e $ ! _T0IF 107  ]
 {
-"220
-[; ;EsameFinaleMain.c: 220:         TMR0= 6;
+"229
+[; ;EsameFinaleMain.c: 229:         TMR0= 6;
 [e = _TMR0 -> -> 6 `i `uc ]
-"222
-[; ;EsameFinaleMain.c: 222:         timeCount++;
-[e ++ _timeCount -> -> 1 `i `uc ]
-"224
-[; ;EsameFinaleMain.c: 224:         if(timeCount > 30){
-[e $ ! > -> _timeCount `i -> 30 `i 108  ]
-{
-"225
-[; ;EsameFinaleMain.c: 225:             timeCount= 0;
-[e = _timeCount -> -> 0 `i `uc ]
-"226
-[; ;EsameFinaleMain.c: 226:             PORTB^= 0x80;
-[e =^ _PORTB -> -> 128 `i `Vuc ]
-"227
-[; ;EsameFinaleMain.c: 227:             flag|= 0x02;
-[e =| _flag -> -> 2 `i `uc ]
-"228
-[; ;EsameFinaleMain.c: 228:         }
-}
-[e :U 108 ]
-"230
-[; ;EsameFinaleMain.c: 230:         T0IF=0;
-[e = _T0IF -> -> 0 `i `b ]
 "231
-[; ;EsameFinaleMain.c: 231:     }
-}
-[e :U 107 ]
-"232
-[; ;EsameFinaleMain.c: 232:     if(RCIF){
-[e $ ! _RCIF 109  ]
+[; ;EsameFinaleMain.c: 231:         timeCount++;
+[e ++ _timeCount -> -> 1 `i `uc ]
+"233
+[; ;EsameFinaleMain.c: 233:         if(timeCount > 31){
+[e $ ! > -> _timeCount `i -> 31 `i 108  ]
 {
 "234
-[; ;EsameFinaleMain.c: 234:         dataReceived[indexReceived++]= RCREG;
-[e = *U + &U _dataReceived * -> ++ _indexReceived -> -> 1 `i `uc `ux -> -> # *U &U _dataReceived `ui `ux _RCREG ]
+[; ;EsameFinaleMain.c: 234:             timeCount= 0;
+[e = _timeCount -> -> 0 `i `uc ]
 "235
-[; ;EsameFinaleMain.c: 235:         if(indexReceived == 3){
-[e $ ! == -> _indexReceived `i -> 3 `i 110  ]
-{
+[; ;EsameFinaleMain.c: 235:             PORTB^= 0x80;
+[e =^ _PORTB -> -> 128 `i `Vuc ]
+"236
+[; ;EsameFinaleMain.c: 236:             flag|= 0x02;
+[e =| _flag -> -> 2 `i `uc ]
 "237
-[; ;EsameFinaleMain.c: 237:             flag|= 0x01;
-[e =| _flag -> -> 1 `i `uc ]
-"238
-[; ;EsameFinaleMain.c: 238:         }
+[; ;EsameFinaleMain.c: 237:         }
 }
-[e :U 110 ]
+[e :U 108 ]
 "239
-[; ;EsameFinaleMain.c: 239:         RCIF= 0;
-[e = _RCIF -> -> 0 `i `b ]
+[; ;EsameFinaleMain.c: 239:         T0IF=0;
+[e = _T0IF -> -> 0 `i `b ]
 "240
 [; ;EsameFinaleMain.c: 240:     }
 }
+[e :U 107 ]
+"242
+[; ;EsameFinaleMain.c: 242:     if(RCIF){
+[e $ ! _RCIF 109  ]
+{
+"244
+[; ;EsameFinaleMain.c: 244:         dataReceived[indexReceived++]= RCREG;
+[e = *U + &U _dataReceived * -> ++ _indexReceived -> -> 1 `i `uc `ux -> -> # *U &U _dataReceived `ui `ux _RCREG ]
+"245
+[; ;EsameFinaleMain.c: 245:         if(indexReceived == 3){
+[e $ ! == -> _indexReceived `i -> 3 `i 110  ]
+{
+"247
+[; ;EsameFinaleMain.c: 247:             flag|= 0x01;
+[e =| _flag -> -> 1 `i `uc ]
+"248
+[; ;EsameFinaleMain.c: 248:         }
+}
+[e :U 110 ]
+"249
+[; ;EsameFinaleMain.c: 249:         RCIF= 0;
+[e = _RCIF -> -> 0 `i `b ]
+"250
+[; ;EsameFinaleMain.c: 250:     }
+}
 [e :U 109 ]
-"241
-[; ;EsameFinaleMain.c: 241: }
+"251
+[; ;EsameFinaleMain.c: 251: }
 [e :UE 106 ]
 }
-"250
-[; ;EsameFinaleMain.c: 250: void clearBuff(unsigned char *buf, unsigned char dim, unsigned char *index){
+"260
+[; ;EsameFinaleMain.c: 260: void clearBuff(unsigned char *buf, unsigned char dim, unsigned char *index){
 [v _clearBuff `(v ~T0 @X0 1 ef3`*uc`uc`*uc ]
 {
 [e :U _clearBuff ]
@@ -626,184 +624,174 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _dim `uc ~T0 @X0 1 r2 ]
 [v _index `*uc ~T0 @X0 1 r3 ]
 [f ]
-"251
-[; ;EsameFinaleMain.c: 251:     for (unsigned char i= 0; i < dim; i++){
+"261
+[; ;EsameFinaleMain.c: 261:     for (unsigned char i= 0; i < dim; i++){
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $U 115  ]
 [e :U 112 ]
 {
-"252
-[; ;EsameFinaleMain.c: 252:         buf[i]= 0;
+"262
+[; ;EsameFinaleMain.c: 262:         buf[i]= 0;
 [e = *U + _buf * -> _i `ux -> -> # *U _buf `ui `ux -> -> 0 `i `uc ]
-"253
-[; ;EsameFinaleMain.c: 253:     }
+"263
+[; ;EsameFinaleMain.c: 263:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e :U 115 ]
 [e $ < -> _i `i -> _dim `i 112  ]
 [e :U 113 ]
 }
-"254
-[; ;EsameFinaleMain.c: 254:     *index= 0;
+"264
+[; ;EsameFinaleMain.c: 264:     *index= 0;
 [e = *U _index -> -> 0 `i `uc ]
-"255
-[; ;EsameFinaleMain.c: 255: }
+"265
+[; ;EsameFinaleMain.c: 265: }
 [e :UE 111 ]
 }
-"258
-[; ;EsameFinaleMain.c: 258: void decode(){
+"268
+[; ;EsameFinaleMain.c: 268: void decode(){
 [v _decode `(v ~T0 @X0 1 ef ]
 {
 [e :U _decode ]
 [f ]
-"259
-[; ;EsameFinaleMain.c: 259:     if(dataReceived[0] == 0x01 || dataReceived[0] == 0xff){
+"269
+[; ;EsameFinaleMain.c: 269:     if(dataReceived[0] == 0x01 ||
 [e $ ! || == -> *U + &U _dataReceived * -> -> -> 0 `i `ui `ux -> -> # *U &U _dataReceived `ui `ux `i -> 1 `i == -> *U + &U _dataReceived * -> -> -> 0 `i `ui `ux -> -> # *U &U _dataReceived `ui `ux `i -> 255 `i 117  ]
+"270
+[; ;EsameFinaleMain.c: 270:             dataReceived[0] == 0xff){
 {
-"260
-[; ;EsameFinaleMain.c: 260:         decine=dataReceived[1];
+"271
+[; ;EsameFinaleMain.c: 271:         decine=dataReceived[1];
 [e = _decine -> *U + &U _dataReceived * -> -> -> 1 `i `ui `ux -> -> # *U &U _dataReceived `ui `ux `uc ]
-"261
-[; ;EsameFinaleMain.c: 261:         unita=dataReceived[2];
+"272
+[; ;EsameFinaleMain.c: 272:         unita=dataReceived[2];
 [e = _unita -> *U + &U _dataReceived * -> -> -> 2 `i `ui `ux -> -> # *U &U _dataReceived `ui `ux `uc ]
-"262
-[; ;EsameFinaleMain.c: 262:     }
+"273
+[; ;EsameFinaleMain.c: 273:     }
 }
 [e :U 117 ]
-"263
-[; ;EsameFinaleMain.c: 263: }
+"274
+[; ;EsameFinaleMain.c: 274: }
 [e :UE 116 ]
 }
-"272
-[; ;EsameFinaleMain.c: 272: void LCD_Send(char data, char mode)
+"283
+[; ;EsameFinaleMain.c: 283: void LCD_Send(char data, char mode){
 [v _LCD_Send `(v ~T0 @X0 1 ef2`uc`uc ]
-"273
-[; ;EsameFinaleMain.c: 273: {
 {
 [e :U _LCD_Send ]
-"272
-[; ;EsameFinaleMain.c: 272: void LCD_Send(char data, char mode)
 [v _data `uc ~T0 @X0 1 r1 ]
 [v _mode `uc ~T0 @X0 1 r2 ]
-"273
-[; ;EsameFinaleMain.c: 273: {
 [f ]
-"276
-[; ;EsameFinaleMain.c: 276:     PORTE |= 0X02;
+"284
+[; ;EsameFinaleMain.c: 284:     PORTE |= 0X02;
 [e =| _PORTE -> -> 2 `i `Vuc ]
-"277
-[; ;EsameFinaleMain.c: 277:     PORTD = data;
+"285
+[; ;EsameFinaleMain.c: 285:     PORTD = data;
 [e = _PORTD -> _data `uc ]
-"278
-[; ;EsameFinaleMain.c: 278:     (mode) ? (PORTE = PORTE & ~0X04) : (PORTE |= 0X04);
+"286
+[; ;EsameFinaleMain.c: 286:     (mode) ? (PORTE = PORTE & ~0X04) : (PORTE |= 0X04);
 [e ? != -> _mode `i -> 0 `i : -> = _PORTE -> & -> _PORTE `i ~ -> 4 `i `uc `i -> =| _PORTE -> -> 4 `i `Vuc `i ]
-"279
-[; ;EsameFinaleMain.c: 279:     _delay((unsigned long)((3)*(8000000/4000.0)));
+"287
+[; ;EsameFinaleMain.c: 287:     _delay((unsigned long)((3)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 3 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"280
-[; ;EsameFinaleMain.c: 280:     PORTE &= ~0X02;
+"288
+[; ;EsameFinaleMain.c: 288:     PORTE &= ~0X02;
 [e =& _PORTE -> ~ -> 2 `i `Vuc ]
-"281
-[; ;EsameFinaleMain.c: 281:     _delay((unsigned long)((3)*(8000000/4000.0)));
+"289
+[; ;EsameFinaleMain.c: 289:     _delay((unsigned long)((3)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 3 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"282
-[; ;EsameFinaleMain.c: 282:     PORTE |= 0X02;
+"290
+[; ;EsameFinaleMain.c: 290:     PORTE |= 0X02;
 [e =| _PORTE -> -> 2 `i `Vuc ]
-"283
-[; ;EsameFinaleMain.c: 283: }
+"291
+[; ;EsameFinaleMain.c: 291: }
 [e :UE 118 ]
 }
-"286
-[; ;EsameFinaleMain.c: 286: void LCD_Write(char phrase[])
+"294
+[; ;EsameFinaleMain.c: 294: void LCD_Write(char phrase[]){
 [v _LCD_Write `(v ~T0 @X0 1 ef1`*uc ]
-"287
-[; ;EsameFinaleMain.c: 287: {
 {
 [e :U _LCD_Write ]
-"286
-[; ;EsameFinaleMain.c: 286: void LCD_Write(char phrase[])
 [v _phrase `*uc ~T0 @X0 1 r1 ]
-"287
-[; ;EsameFinaleMain.c: 287: {
 [f ]
-"289
-[; ;EsameFinaleMain.c: 289:     for(int j = 0; j < 32; j++)
+"296
+[; ;EsameFinaleMain.c: 296:     for(int j = 0; j < 32; j++)
 {
 [v _j `i ~T0 @X0 1 a ]
 [e = _j -> 0 `i ]
 [e $ < _j -> 32 `i 120  ]
 [e $U 121  ]
 [e :U 120 ]
-"290
-[; ;EsameFinaleMain.c: 290:     {
+"297
+[; ;EsameFinaleMain.c: 297:     {
 {
-"291
-[; ;EsameFinaleMain.c: 291:         if(phrase[j] == '\0'){break;};
+"298
+[; ;EsameFinaleMain.c: 298:         if(phrase[j] == '\0'){break;};
 [e $ ! == -> *U + _phrase * -> _j `x -> -> # *U _phrase `i `x `ui -> 0 `ui 123  ]
 {
 [e $U 121  ]
 }
 [e :U 123 ]
-"292
-[; ;EsameFinaleMain.c: 292:         if (j == 16){LCD_Send(0XC0, 1);}
+"299
+[; ;EsameFinaleMain.c: 299:         if (j == 16){LCD_Send(0XC0, 1);}
 [e $ ! == _j -> 16 `i 124  ]
 {
 [e ( _LCD_Send (2 , -> -> 192 `i `uc -> -> 1 `i `uc ]
 }
 [e :U 124 ]
-"293
-[; ;EsameFinaleMain.c: 293:         if (j == 32){LCD_Send(0X80, 1);}
+"300
+[; ;EsameFinaleMain.c: 300:         if (j == 32){LCD_Send(0X80, 1);}
 [e $ ! == _j -> 32 `i 125  ]
 {
 [e ( _LCD_Send (2 , -> -> 128 `i `uc -> -> 1 `i `uc ]
 }
 [e :U 125 ]
-"294
-[; ;EsameFinaleMain.c: 294:         LCD_Send(phrase[j], 0);
+"301
+[; ;EsameFinaleMain.c: 301:         LCD_Send(phrase[j], 0);
 [e ( _LCD_Send (2 , *U + _phrase * -> _j `x -> -> # *U _phrase `i `x -> -> 0 `i `uc ]
-"295
-[; ;EsameFinaleMain.c: 295:     }
+"302
+[; ;EsameFinaleMain.c: 302:     }
 }
 [e ++ _j -> 1 `i ]
 [e $ < _j -> 32 `i 120  ]
 [e :U 121 ]
 }
-"296
-[; ;EsameFinaleMain.c: 296: }
+"303
+[; ;EsameFinaleMain.c: 303: }
 [e :UE 119 ]
 }
-"299
-[; ;EsameFinaleMain.c: 299: void LCD_Start(void){
+"306
+[; ;EsameFinaleMain.c: 306: void LCD_Start(void){
 [v _LCD_Start `(v ~T0 @X0 1 ef ]
 {
 [e :U _LCD_Start ]
 [f ]
-"300
-[; ;EsameFinaleMain.c: 300:     LCD_Write("Valore =");
+"307
+[; ;EsameFinaleMain.c: 307:     LCD_Write("Valore =");
 [e ( _LCD_Write (1 :s 1C ]
-"301
-[; ;EsameFinaleMain.c: 301: }
+"308
+[; ;EsameFinaleMain.c: 308: }
 [e :UE 126 ]
 }
-"304
-[; ;EsameFinaleMain.c: 304: void LCD_Value(void){
+"311
+[; ;EsameFinaleMain.c: 311: void LCD_Value(void){
 [v _LCD_Value `(v ~T0 @X0 1 ef ]
 {
 [e :U _LCD_Value ]
 [f ]
-"305
-[; ;EsameFinaleMain.c: 305:     LCD_Send(0x89, 1);
+"312
+[; ;EsameFinaleMain.c: 312:     LCD_Send(0x89, 1);
 [e ( _LCD_Send (2 , -> -> 137 `i `uc -> -> 1 `i `uc ]
-"306
-[; ;EsameFinaleMain.c: 306:     LCD_Send(decine, 0);
+"313
+[; ;EsameFinaleMain.c: 313:     LCD_Send(decine, 0);
 [e ( _LCD_Send (2 , _decine -> -> 0 `i `uc ]
-"307
-[; ;EsameFinaleMain.c: 307:     LCD_Send(unita, 0);
+"314
+[; ;EsameFinaleMain.c: 314:     LCD_Send(unita, 0);
 [e ( _LCD_Send (2 , _unita -> -> 0 `i `uc ]
-"308
-[; ;EsameFinaleMain.c: 308: }
+"315
+[; ;EsameFinaleMain.c: 315: }
 [e :UE 127 ]
 }
 [a 1C 86 97 108 111 114 101 32 61 0 ]
