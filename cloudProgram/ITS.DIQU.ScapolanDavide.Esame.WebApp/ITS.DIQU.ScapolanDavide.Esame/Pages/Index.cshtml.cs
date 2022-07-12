@@ -22,6 +22,8 @@ namespace ITS.DIQU.ScapolanDavide.Esame.Pages
 
             _connectionString = configuration.GetConnectionString("IotHubConnectionString");
             _targetDevice1 = configuration.GetConnectionString("DeviceId1");
+            _targetDevice2 = configuration.GetConnectionString("DeviceId2");
+            _targetDevice3 = configuration.GetConnectionString("DeviceId3");
 
             registry = RegistryManager.CreateFromConnectionString(_connectionString);
         }
