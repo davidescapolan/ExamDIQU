@@ -6,6 +6,55 @@
 
 <div class="text-center">
     <h1 class="display-4">TITLE EXAM</h1>
+
+    <h2 class="display-4">Get</h2>
+
+    <form method="get">
+
+            <div class="mb-4">
+                <label class="d-block">Scegli il device</label>
+                <select name="device">
+                    <option selected value="device1">Device1</option>
+                    <option value="device2">Device2</option>
+                    <option value="device3">Device3</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <input type="submit" value="Submit"/>
+            </div>
+
+    </form>
+
+    <div align="center">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr class="thead-dark">
+                    <th scope="col" class="text-center">uC</th>
+                    <th scope="col" class="text-center">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" class="text-center">uC 1</th>
+                    <td class="text-center">@Model.DeviceObject.Micro1</td>
+                </tr>
+
+                <tr>
+                    <th scope="row" class="text-center">uC 2</th>
+                    <td class="text-center">@Model.DeviceObject.Micro2</td>
+                </tr>
+
+                <tr>
+                    <th scope="row" class="text-center">uC 3</th>
+                    <td class="text-center">@Model.DeviceObject.Micro3</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <h2 class="display-4">Post</h2>
+
     <form method="post">
 
             <div class="mb-4">

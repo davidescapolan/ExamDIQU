@@ -9,7 +9,6 @@ namespace ITS.DIQU.ScapolanDavide.Esame.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 
-        static ServiceClient serviceClient;
         static string _connectionString;
         static string _targetDevice1;
         static string _targetDevice2;
@@ -23,29 +22,42 @@ namespace ITS.DIQU.ScapolanDavide.Esame.Pages
 
             _connectionString = configuration.GetConnectionString("IotHubConnectionString");
             _targetDevice1 = configuration.GetConnectionString("DeviceId1");
-            _targetDevice2 = configuration.GetConnectionString("DeviceId2");
-            _targetDevice3 = configuration.GetConnectionString("DeviceId3");
-
 
             registry = RegistryManager.CreateFromConnectionString(_connectionString);
         }
 
         [BindProperty]
         public TConfigDeviceTwin Input { get; set; }
+        public TDevice DeviceObject { get; set; }
 
-        public async Task<IActionResult> OnGetAsync()
+        public async Task<IActionResult> OnGetAsync(string device = "device1")
         {
             Input = new TConfigDeviceTwin();
+            DeviceObject = new TDevice();
 
             //Set the comunication with the device1
-            var deviceTwin = await registry.GetTwinAsync(_targetDevice1);
-            //check if the Reported parameters contains Value value
-            if (deviceTwin.Properties.Reported.Contains("Micro1"))
+            var deviceTwin = await registry.GetTwinAsync(device);
+
+            //check if the Desired parameters contains Value
+            if (deviceTwin.Properties.Desired.Contains("Micro1"))
             {
-                //Insert the new old value in the input field
-                var reportedValue = deviceTwin.Properties.Reported["Micro1"];
-                Input.Value = reportedValue;
+                //Insert the old value in the table
+                var desiredValue = deviceTwin.Properties.Desired["Micro1"];
+                DeviceObject.Micro1 = desiredValue;
             }
+            if (deviceTwin.Properties.Desired.Contains("Micro2"))
+            {
+                //Insert the old value in the table
+                var desiredValue = deviceTwin.Properties.Desired["Micro2"];
+                DeviceObject.Micro2 = desiredValue;
+            }
+            if (deviceTwin.Properties.Desired.Contains("Micro3"))
+            {
+                //Insert the old value in the table
+                var desiredValue = deviceTwin.Properties.Desired["Micro3"];
+                DeviceObject.Micro3 = desiredValue;
+            }
+
             return Page();
         }
 
