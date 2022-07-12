@@ -5,7 +5,6 @@
  * Created on 9 luglio 2022, 13.04
  */
 
-
 /*
 ================================================================================
  CONFIG
@@ -25,7 +24,7 @@
 #pragma config CP = OFF // Flash Program Memory Code Protection bit (Code 
 //protection off)
 
-#define _XTAL_FREQ 8000000
+#define _XTAL_FREQ 8000000 //8 MHZ   8 000 KHz    8 000 000 Hz
 
 // <editor-fold defaultstate="collapsed" desc="FLAG">
 
@@ -289,9 +288,9 @@ void LCD_Write(char phrase[])
     for(int j = 0; j < 32; j++)
     {
         if(phrase[j] == '\0'){break;};
-        if (j == 16){LCD_Send(L_L2_C1, 1);}
-        if (j == 32){LCD_Send(L_L1_C1, 1);}
-        LCD_Send(phrase[j], 0);
+        if (j == 16){LCD_Send(L_L2_C1, CMD);}
+        if (j == 32){LCD_Send(L_L1_C1, CMD);}
+        LCD_Send(phrase[j], DTA);
     }
 }
 
