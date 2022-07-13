@@ -16,11 +16,9 @@ namespace ITS.DIQU.ScapolanDavide.Esame.Pages
 
         private readonly RegistryManager registry;
 
-
         [BindProperty]
         public TConfigDeviceTwin Input { get; set; }
         public TDevice DeviceObject { get; set; }
-
 
         public IndexModel(IConfiguration configuration, ILogger<IndexModel> logger)
         {
@@ -45,24 +43,9 @@ namespace ITS.DIQU.ScapolanDavide.Esame.Pages
             var deviceTwin = await registry.GetTwinAsync(device);
 
             //check if the Desired parameters contains Value
-            if (deviceTwin.Properties.Desired.Contains("Micro1"))
-            {
-                //Insert the old value in the table
-                var desiredValue = deviceTwin.Properties.Desired["Micro1"];
-                DeviceObject.Micro1 = desiredValue;
-            }
-            if (deviceTwin.Properties.Desired.Contains("Micro2"))
-            {
-                //Insert the old value in the table
-                var desiredValue = deviceTwin.Properties.Desired["Micro2"];
-                DeviceObject.Micro2 = desiredValue;
-            }
-            if (deviceTwin.Properties.Desired.Contains("Micro3"))
-            {
-                //Insert the old value in the table
-                var desiredValue = deviceTwin.Properties.Desired["Micro3"];
-                DeviceObject.Micro3 = desiredValue;
-            }
+            DeviceObject.Micro1 = CheckReported(deviceTwin, "Micro1");
+            DeviceObject.Micro2 = CheckReported(deviceTwin, "Micro2");
+            DeviceObject.Micro3 = CheckReported(deviceTwin, "Micro3");
 
             return Page();
         }
@@ -75,6 +58,10 @@ namespace ITS.DIQU.ScapolanDavide.Esame.Pages
 
             switch (idDevice)
             {
+                case "device1":
+                    //Set the comunication with the Device
+                    deviceTwin = await registry.GetTwinAsync(_targetDevice1);
+                    break;
                 case "device2":
                     //Set the comunication with the Device
                     deviceTwin = await registry.GetTwinAsync(_targetDevice2);
@@ -85,13 +72,14 @@ namespace ITS.DIQU.ScapolanDavide.Esame.Pages
                     break;
                 default:
                     //Set the comunication with the Device
-                    deviceTwin = await registry.GetTwinAsync(_targetDevice1);
+                    deviceTwin = await registry.GetTwinAsync("");
                     break;
             }
 
             //Get the value of the field
             int val = Input.Value;
             int micro = Input.Micro;
+
             if (val>9)
             {
                 //Set the Desired properties
@@ -107,6 +95,16 @@ namespace ITS.DIQU.ScapolanDavide.Esame.Pages
             await registry.UpdateTwinAsync(idDevice, deviceTwin, deviceTwin.ETag);
 
             return Page();
+        }
+
+        private string CheckReported (Microsoft.Azure.Devices.Shared.Twin twin,string propertyName)
+        {
+            if (twin.Properties.Reported.Contains(propertyName))
+            {
+                //Insert the old value in the table
+                return twin.Properties.Reported[propertyName];
+            }
+            return null;
         }
     }
 }

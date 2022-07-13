@@ -7,82 +7,112 @@
 <div class="text-center">
     <h1 class="display-4">TITLE EXAM</h1>
 
-    <h2 class="display-4">Get</h2>
+    <div class="container">
 
-    <form method="get">
+        <div class="card text-center col-sm-12 col-lg-8 my-5 mx-auto">
 
-            <div class="mb-4">
-                <label class="d-block">Scegli il device</label>
-                <select name="device">
-                    <option selected value="device1">Device1</option>
-                    <option value="device2">Device2</option>
-                    <option value="device3">Device3</option>
-                </select>
+            <div class="card-header">
+
+                <h2 class="h2">Get</h2>
+
             </div>
 
-            <div class="mb-4">
-                <input type="submit" value="Submit"/>
+            <div class="card-body">
+
+                <form method="get">
+                    <div class="mb-4">
+                        <label class="d-block" for="device">Scegli il device</label>
+                        <select name="device">
+                            <option selected value="device1">Device1</option>
+                            <option value="device2">Device2</option>
+                            <option value="device3">Device3</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <input type="submit" value="Submit" />
+                    </div>
+                </form>
+
             </div>
 
-    </form>
+            <div class="card-footer">
 
-    <div align="center">
-        <table class="table">
-            <thead class="thead-dark">
-                <tr class="thead-dark">
-                    <th scope="col" class="text-center">uC</th>
-                    <th scope="col" class="text-center">Value</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row" class="text-center">uC 1</th>
-                    <td class="text-center">@Model.DeviceObject.Micro1</td>
-                </tr>
+                <div align="center">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-center">uC</th>
+                                <th scope="col" class="text-center">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="text-center">uC 1</th>
+                                <td class="text-center">@Model.DeviceObject.Micro1</td>
+                            </tr>
 
-                <tr>
-                    <th scope="row" class="text-center">uC 2</th>
-                    <td class="text-center">@Model.DeviceObject.Micro2</td>
-                </tr>
+                            <tr>
+                                <th scope="row" class="text-center">uC 2</th>
+                                <td class="text-center">@Model.DeviceObject.Micro2</td>
+                            </tr>
 
-                <tr>
-                    <th scope="row" class="text-center">uC 3</th>
-                    <td class="text-center">@Model.DeviceObject.Micro3</td>
-                </tr>
-            </tbody>
-        </table>
+                            <tr>
+                                <th scope="row" class="text-center">uC 3</th>
+                                <td class="text-center">@Model.DeviceObject.Micro3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card text-center col-sm-12 col-lg-8 my-5  mx-auto">
+
+            <div class="card-header">
+
+                <h2 class="h2">Post</h2>
+
+            </div>
+
+            <div class="card-body">
+
+                <form method="post">
+
+                    <div class="mb-4">
+                        <label class="d-block" asp-for="Input.IdDevice">Scegli il device</label>
+                        <select asp-for="Input.IdDevice">
+                            <option selected value="device1">Device1</option>
+                            <option value="device2">Device2</option>
+                            <option value="device3">Device3</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="d-block" asp-for="Input.Micro">Scegli micro</label>
+                        <select asp-for="Input.Micro">
+                            <option selected value=1>Micro1</option>
+                            <option value=2>Micro2</option>
+                            <option value=3>Micro3</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="d-block" asp-for="Input.Value">Scegli il valore da inviare</label>
+                        <input asp-for="Input.Value" type="number" min=0 max=99>
+                    </div>
+
+                    <div class="mb-4">
+                        <input type="submit" value="Submit" />
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
     </div>
-    
-    <h2 class="display-4">Post</h2>
-
-    <form method="post">
-
-            <div class="mb-4">
-                <label class="d-block" asp-for="Input.IdDevice">Scegli il device</label>
-                <select asp-for="Input.IdDevice">
-                    <option selected value="device1">Device1</option>
-                    <option value="device2">Device2</option>
-                    <option value="device3">Device3</option>
-                </select>
-            </div>
-
-            <div class="mb-4">
-                <label class="d-block" asp-for="Input.Micro">Scegli micro</label>
-                <select asp-for="Input.Micro">
-                    <option selected value=1>Micro1</option>
-                    <option value=2>Micro2</option>
-                    <option value=3>Micro3</option>
-                </select>
-            </div>
-
-            <div class="mb-4">
-                <label class="d-block" asp-for="Input.Value">Scegli il valore da inviare</label>
-                <input asp-for="Input.Value" type="number" min=0 max=99>
-            </div>
-
-            <div class="mb-4">
-                <input type="submit" value="Submit"/>
-            </div>
-
-    </form>
 </div>
