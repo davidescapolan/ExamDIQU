@@ -11,8 +11,6 @@ var deviceConnectionString = process.env.IOTHUB_DEVICE_CONNECTION_STRING;
 var serialPort = process.env.SERIAL_PORT;
 //#endregion
 
-let oldMicro = [];
-
 //#region creazione porta seriale
 const port = new SerialPort(serialPort, {
   baudRate: 115200
@@ -57,7 +55,13 @@ client.open(function(err) {
                     if(delta.hasOwnProperty('Micro1'))
                     {
                         let Value = delta.Micro1;
-                        if(Value!= oldMicro[0])
+                        let report;
+                        if(twin.properties.reported.hasOwnProperty('Micro1'))
+                        {
+                            report = twin.properties.reported.Micro1;
+                        }
+                        
+                        if(Value!= report)
                         {
                             var ByteArray = [0x01];
                             var buffer = new Buffer.from(Value, 'utf8');
@@ -69,7 +73,15 @@ client.open(function(err) {
                                     return console.log('Error on write: ', err.message);
                                 }
                             });
-                            oldMicro[0] = Value;
+                            
+                            let patch = {
+                                "Micro1":Value
+                            }
+
+                            twin.properties.reported.update(patch, function (err) {
+                                if (err) throw err;
+                                console.log('Properties have been reported for component');
+                            });
                         }
                     }
                     //#endregion
@@ -78,7 +90,13 @@ client.open(function(err) {
                     if(delta.hasOwnProperty('Micro2'))
                     {
                         let Value = delta.Micro2;
-                        if(Value!= oldMicro[1])
+                        let report;
+                        if(twin.properties.reported.hasOwnProperty('Micro2'))
+                        {
+                            report = twin.properties.reported.Micro2;
+                        }
+
+                        if(Value!= report)
                         {
                             var ByteArray = [0x02];
                             var buffer = new Buffer.from(Value, 'utf8');
@@ -90,7 +108,15 @@ client.open(function(err) {
                                     return console.log('Error on write: ', err.message);
                                 }
                             });
-                            oldMicro[1] = Value;
+                            
+                            let patch = {
+                                "Micro2":Value
+                            }
+                            
+                            twin.properties.reported.update(patch, function (err) {
+                                if (err) throw err;
+                                console.log('Properties have been reported for component');
+                            });
                         }
                     }
                     //#endregion
@@ -99,7 +125,13 @@ client.open(function(err) {
                     if(delta.hasOwnProperty('Micro3'))
                     {
                         let Value = delta.Micro3;
-                        if(Value!= oldMicro[2])
+                        let report;
+                        if(twin.properties.reported.hasOwnProperty('Micro3'))
+                        {
+                            report = twin.properties.reported.Micro3;
+                        }
+
+                        if(Value!= report)
                         {
                             var ByteArray = [0x03];
                             var buffer = new Buffer.from(Value, 'utf8');
@@ -111,7 +143,15 @@ client.open(function(err) {
                                     return console.log('Error on write: ', err.message);
                                 }
                             });
-                            oldMicro[2] = Value;
+                            
+                            let patch = {
+                                "Micro3":Value
+                            }
+                            
+                            twin.properties.reported.update(patch, function (err) {
+                                if (err) throw err;
+                                console.log('Properties have been reported for component');
+                            });
                         }
                     }
                     //#endregion
