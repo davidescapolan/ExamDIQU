@@ -54,6 +54,7 @@ client.open(function(err) {
                     //#region desired property per uC1
                     if(delta.hasOwnProperty('Micro1'))
                     {
+                        //legge il valore attuale della proprietà
                         let Value = delta.Micro1;
                         let report;
                         if(twin.properties.reported.hasOwnProperty('Micro1'))
