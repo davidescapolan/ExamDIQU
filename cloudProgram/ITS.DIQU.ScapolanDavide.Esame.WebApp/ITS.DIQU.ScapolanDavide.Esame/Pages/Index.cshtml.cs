@@ -94,7 +94,9 @@ namespace ITS.DIQU.ScapolanDavide.Esame.Pages
             //Send to the Device the new configuration
             await registry.UpdateTwinAsync(idDevice, deviceTwin, deviceTwin.ETag);
 
-            return Page();
+            Thread.Sleep(500);
+
+            return RedirectToPage("", idDevice);
         }
 
         private string CheckReported (Microsoft.Azure.Devices.Shared.Twin twin,string propertyName)
