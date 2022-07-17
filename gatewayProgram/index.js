@@ -64,6 +64,7 @@ client.open(function(err) {
                         
                         if(Value!= report)
                         {
+                            
                             var ByteArray = [0x01];
                             var buffer = new Buffer.from(Value, 'utf8');
                             for (var i = 0; i < buffer.length; i++) {
