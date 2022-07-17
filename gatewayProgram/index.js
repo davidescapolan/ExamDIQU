@@ -68,6 +68,7 @@ client.open(function(err) {
                             for (var i = 0; i < buffer.length; i++) {
                                 ByteArray.push(buffer[i]);
                             }
+                            
                             port.write(ByteArray, function(err) {
                                 if (err) {
                                     return console.log('Error on write: ', err.message);
