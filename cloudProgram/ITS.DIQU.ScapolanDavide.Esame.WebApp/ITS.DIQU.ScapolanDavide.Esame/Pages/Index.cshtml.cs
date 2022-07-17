@@ -96,7 +96,7 @@ namespace ITS.DIQU.ScapolanDavide.Esame.Pages
 
             Thread.Sleep(500);
 
-            return RedirectToPage("", idDevice);
+            return RedirectToPage("", new { id = idDevice, });
         }
 
         private string CheckReported (Microsoft.Azure.Devices.Shared.Twin twin,string propertyName)
