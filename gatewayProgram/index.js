@@ -63,12 +63,12 @@ client.open(function(err) {
                         
                         if(Value!= report)
                         {
-                            
                             var ByteArray = [0x01];
                             var buffer = new Buffer.from(Value, 'utf8');
                             for (var i = 0; i < buffer.length; i++) {
                                 ByteArray.push(buffer[i]);
                             }
+                            
                             port.write(ByteArray, function(err) {
                                 if (err) {
                                     return console.log('Error on write: ', err.message);
