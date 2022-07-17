@@ -41,7 +41,6 @@ client.open(function(err) {
         console.error('could not open IotHub client');
     }  else {
         console.log('client opened');
-  
         //#region creazione Device Twin
         client.getTwin(function(err, twin) {
             if (err) {
